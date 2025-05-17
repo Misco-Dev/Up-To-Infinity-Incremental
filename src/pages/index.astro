@@ -41,43 +41,6 @@ import Countdown from "@/components/countdown.astro"
 </Layout>
 
 <style>
-    body{
-		margin: 0;
-		font-family: 'fredoka', sans-serif;
-		font-weight: 700;
-		position: relative;
-		width: 100vw;
-		height: 100vh;
-		color: #cdcdcd;
-		background-color: #000; 
-		overflow-x: hidden;
-		display: flex;
-		flex-direction: column;
-	}
-
-	body::before {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: url('/image/background.webp') center center / cover no-repeat fixed;
-		opacity: 0.5;
-		z-index: -2;
-	}
-
-	body::after {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: linear-gradient(180deg, #0005 0%, #000b 100%);
-		z-index: -1;
-	}
-    
     .hero-section {
         min-height: 80vh;
         display: flex;
@@ -195,16 +158,142 @@ import Countdown from "@/components/countdown.astro"
     @media (max-width: 768px) {
         .hero-section {
             padding: 1rem;
-            min-height: 60vh;
+            min-height: auto;
         }
 
         .container {
-            padding: 2rem 1rem;
+            padding: 1.5rem 1rem;
+            margin: 1rem;
+            border-radius: 16px;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .introduction {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .introduction-content {
+            font-size: 1.25rem;
+        }
+
+        .introduction-content-description {
+            font-size: 1rem;
+            margin: 0.75rem auto;
+            padding: 0 0.5rem;
         }
 
         .features {
             grid-template-columns: 1fr;
-            gap: 1.5rem;
+            gap: 1.25rem;
+            margin-top: 2rem;
+            padding: 0.5rem;
+        }
+
+        .feature-item {
+            padding: 1.25rem;
+            border-radius: 12px;
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            margin: 0.25rem 0;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+        }
+
+        .countdown-section {
+            padding: 2rem 1rem;
+        }
+
+        .countdown-text {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .hero-section {
+            padding: 0.75rem;
+        }
+
+        .container {
+            padding: 1.25rem 0.75rem;
+            margin: 0.5rem;
+            border-radius: 12px;
+        }
+
+        .title {
+            font-size: 2rem;
+        }
+
+        .introduction {
+            font-size: 1.25rem;
+            margin: 0.75rem 0;
+        }
+
+        .introduction-content {
+            font-size: 1.1rem;
+        }
+
+        .introduction-content-description {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            padding: 0 0.25rem;
+        }
+
+        .features {
+            gap: 1rem;
+            margin-top: 1.5rem;
+            padding: 0.25rem;
+        }
+
+        .feature-item {
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .feature-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1rem;
+        }
+
+        .feature-item p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .countdown-section {
+            padding: 1.5rem 0.75rem;
+        }
+
+        .countdown-text {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .container:hover {
+            transform: none;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-item:hover {
+            transform: none;
         }
     }
 </style>

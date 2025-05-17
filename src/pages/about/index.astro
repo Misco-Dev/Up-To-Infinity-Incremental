@@ -49,43 +49,6 @@ import Layout from "@/layouts/Layout.astro";
 </Layout>
 
 <style>
-    body{
-		margin: 0;
-		font-family: 'fredoka', sans-serif;
-		font-weight: 700;
-		position: relative;
-		width: 100vw;
-		height: 100vh;
-		color: #cdcdcd;
-		background-color: #000; 
-		overflow-x: hidden;
-		display: flex;
-		flex-direction: column;
-	}
-
-	body::before {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: url('/image/background.webp') center center / cover no-repeat fixed;
-		opacity: 0.5;
-		z-index: -2;
-	}
-
-	body::after {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: linear-gradient(180deg, #0005 0%, #000b 100%);
-		z-index: -1;
-	}
-
     .about-container {
         max-width: 1200px;
         margin: 0 auto;
