@@ -1,0 +1,212 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Up To Infinity Incremental | About">
+    <main role="main">
+        <div class="about-container">
+            <section class="hero-section">
+                <h1 class="title">Qronex Studio</h1>
+                <p class="subtitle">Creators of Up To Infinity Incremental</p>
+            </section>
+
+            <section class="content-section">
+                <div class="card">
+                    <h2 class="section-title">About The Game</h2>
+                    <p class="section-text">
+                        Up To Infinity Incremental is a unique incremental game that challenges players to reach infinity through strategic upgrades and careful resource management.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h2 class="section-title">Our Story</h2>
+                    <p class="section-text">
+                        Created by <a href="http://qronexstudiosai.work.gd" target="_blank" class="company-link">Qronex Studio</a>, 
+                        we're passionate about creating engaging incremental games that challenge and entertain players.
+                    </p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon">∞</span>
+                        <h3>Infinite Possibilities</h3>
+                        <p>Endless upgrade paths and achievements to unlock</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">⚡</span>
+                        <h3>Fast Progress</h3>
+                        <p>Quick and satisfying progression system</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="feature-icon">🎮</span>
+                        <h3>Dynamic Gameplay</h3>
+                        <p>Engaging mechanics that keep you coming back</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    body{
+		margin: 0;
+		font-family: 'fredoka', sans-serif;
+		font-weight: 700;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		color: #cdcdcd;
+		background-color: #000; 
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: url('/image/background.webp') center center / cover no-repeat fixed;
+		opacity: 0.5;
+		z-index: -2;
+	}
+
+	body::after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(180deg, #0005 0%, #000b 100%);
+		z-index: -1;
+	}
+
+    .about-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .hero-section {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 4rem 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        color: #cdcdcd;
+        opacity: 0.9;
+    }
+
+    .content-section {
+        display: grid;
+        gap: 2rem;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .section-text {
+        color: #cdcdcd;
+        line-height: 1.6;
+    }
+
+    .company-link {
+        color: #8a5be2;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    .company-link:hover {
+        border-color: #8a5be2;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .feature-card {
+        background: rgba(138, 91, 226, 0.1);
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    .feature-card h3 {
+        color: #fff;
+        margin: 1rem 0;
+        font-size: 1.25rem;
+    }
+
+    .feature-card p {
+        color: #cdcdcd;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+        .about-container {
+            padding: 1rem;
+        }
+
+        .hero-section {
+            padding: 2rem 1rem;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+

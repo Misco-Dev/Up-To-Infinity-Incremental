@@ -1,0 +1,201 @@
+---
+import DiscordIcon from '@/assets/discord.svg';
+import TwitterIcon from '@/assets/twitter.svg';
+---
+
+<footer class="footer-container" role="contentinfo">
+    <div class="footer-content">
+        <div class="footer-section">
+            <p class="copyright">&copy; 2025 Up To Infinity Incremental</p>
+            <p class="rights">All rights reserved</p>
+        </div>
+        
+        <nav class="footer-links" role="navigation">
+            <a href="/privacy" class="footer-link">Privacy Policy</a>
+            <a href="/terms" class="footer-link">Terms of Use</a>
+            <a href="/legal" class="footer-link">Legal</a>
+        </nav>
+        
+        <div class="social-links">
+            <a href="https://discord.gg/6pzc7Dny" target="_blank" rel="noopener" class="social-link discord" aria-label="Discord">
+                <DiscordIcon class="icon" />
+            </a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener" class="social-link twitter" aria-label="Twitter">
+                <TwitterIcon class="icon" />
+            </a>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer-container {
+        background: rgba(0, 0, 0, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding: 1.25rem 0;  /* Reduced from 2rem */
+        margin-top: auto;
+        position: relative;
+        z-index: 10;
+    }
+
+    .footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;  /* Reduced from 2rem */
+    }
+
+    .footer-section {
+        text-align: left;
+    }
+
+    .copyright {
+        font-size: 1rem;  /* Reduced from 1.1rem */
+        color: #fff;
+        margin: 0;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .rights {
+        font-size: 0.85rem;  /* Reduced from 0.9rem */
+        color: #a8a8a8;
+        margin: 0.3rem 0 0;  /* Reduced from 0.5rem */
+        letter-spacing: 0.3px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .footer-link {
+        color: #cdcdcd;
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        padding: 0.25rem 0;
+    }
+
+    .footer-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #8a5be2, #ff69b4);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-radius: 2px;
+    }
+
+    .footer-link:hover {
+        color: #fff;
+        transform: translateY(-2px);
+        text-shadow: 0 0 10px rgba(138, 91, 226, 0.6);
+    }
+
+    .footer-link:hover::after {
+        width: 100%;
+        box-shadow: 0 0 10px rgba(138, 91, 226, 0.6);
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .social-link {
+        color: #cdcdcd;
+        text-decoration: none;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 0.5rem;  /* Reduced from 0.6rem */
+        border-radius: 50%;
+        background: rgba(138, 91, 226, 0.12);
+        border: 1.5px solid rgba(138, 91, 226, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;  /* Reduced from 45px */
+        height: 40px;  /* Reduced from 45px */
+        position: relative;
+        overflow: hidden;
+    }
+
+    .social-link::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at center, rgba(138, 91, 226, 0.2), transparent);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+    }
+
+    .social-link .icon {
+        width: 20px;  /* Reduced from 22px */
+        height: 20px;  /* Reduced from 22px */
+        fill: currentColor;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        position: relative;
+        z-index: 2;
+    }
+
+    .social-link:hover {
+        color: #fff;
+        background: rgba(138, 91, 226, 0.25);
+        border-color: rgba(138, 91, 226, 0.4);
+        transform: translateY(-3px) scale(1.15);
+        box-shadow: 0 6px 15px rgba(138, 91, 226, 0.25);
+    }
+
+    .social-link:hover::before {
+        opacity: 1;
+    }
+
+    .social-link:hover .icon {
+        filter: drop-shadow(0 0 6px rgba(138, 91, 226, 0.8));
+        transform: scale(1.1);
+    }
+
+    .discord:hover {
+        background: rgba(88, 101, 242, 0.25);
+        border-color: rgba(88, 101, 242, 0.4);
+        box-shadow: 0 6px 15px rgba(88, 101, 242, 0.25);
+    }
+
+    .twitter:hover {
+        background: rgba(29, 161, 242, 0.25);
+        border-color: rgba(29, 161, 242, 0.4);
+        box-shadow: 0 6px 15px rgba(29, 161, 242, 0.25);
+    }
+
+    @media (max-width: 768px) {
+        .footer-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 1.2rem;  /* Reduced from 1.5rem */
+            padding: 0 1rem;  /* Reduced from 1.5rem */
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+
+        .footer-links {
+            flex-direction: column;
+            gap: 1rem;  /* Reduced from 1.2rem */
+            align-items: center;
+        }
+
+        .social-links {
+            justify-content: center;
+            gap: 1.5rem;  /* Reduced from 2rem */
+        }
+    }
+</style>

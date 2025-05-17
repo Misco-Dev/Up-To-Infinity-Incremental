@@ -1,0 +1,227 @@
+---
+import Layout from "@/layouts/Layout.astro";
+
+interface Feature {
+    title: string;
+    description: string;
+    icon: string;
+}
+
+const features: Feature[] = [
+    {
+        title: "Infinite Progression",
+        description: "Unlock endless possibilities with our unique infinity system",
+        icon: "∞"
+    },
+    {
+        title: "Strategic Upgrades",
+        description: "Choose your path with meaningful upgrade decisions",
+        icon: "⚡"
+    },
+    {
+        title: "Dynamic Challenges",
+        description: "Face new challenges as you progress through the game",
+        icon: "🎮"
+    },
+    {
+        title: "Regular Updates",
+        description: "New content and features added regularly",
+        icon: "🔄"
+    }
+];
+---
+
+<Layout title="Up To Infinity Incremental | Features">
+    <main class="features-container">
+        <section class="hero-section">
+            <h1 class="title">Game Features</h1>
+            <p class="subtitle">Discover what makes our game unique</p>
+        </section>
+
+        <section class="features-grid">
+            {features.map(feature => (
+                <div class="feature-card">
+                    <span class="feature-icon">{feature.icon}</span>
+                    <h2 class="feature-title">{feature.title}</h2>
+                    <p class="feature-description">{feature.description}</p>
+                </div>
+            ))}
+        </section>
+    </main>
+</Layout>
+
+<style>
+    body{
+		margin: 0;
+		font-family: 'fredoka', sans-serif;
+		font-weight: 700;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		color: #cdcdcd;
+		background-color: #000; 
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: url('/image/background.webp') center center / cover no-repeat fixed;
+		opacity: 0.5;
+		z-index: -2;
+	}
+
+	body::after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(180deg, #0005 0%, #000b 100%);
+		z-index: -1;
+	}
+
+    .features-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .hero-section {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 4rem 2rem;
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+    }
+
+    .title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+    }
+
+    .subtitle {
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        color: #cdcdcd;
+        opacity: 0.9;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Increased from 300px */
+        gap: 3rem; /* Increased from 2.5rem */
+        margin-bottom: 4rem;
+        padding: 1.5rem;
+        max-width: 1400px; /* Added max-width */
+        margin-inline: auto; /* Center the grid */
+    }
+
+    .feature-card {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 4rem 3rem; /* Increased padding */
+        border-radius: 2rem; /* Increased border radius */
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+        text-align: center;
+        min-height: 350px; /* Increased minimum height */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card:hover {
+        transform: translateY(-8px); /* Increased lift effect */
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 12px 48px rgba(138, 91, 226, 0.2);
+    }
+
+    .feature-icon {
+        font-size: 4rem; /* Increased from 3rem */
+        margin-bottom: 1.5rem;
+        display: inline-block;
+        text-shadow: 0 0 20px rgba(138, 91, 226, 0.5);
+    }
+
+    .feature-title {
+        font-size: 1.75rem; /* Increased from 1.5rem */
+        color: #fff;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .feature-description {
+        color: #cdcdcd;
+        line-height: 1.8;
+        font-size: 1.1rem; /* Increased font size */
+    }
+
+    .gameplay-section {
+        padding: 4rem 0;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+
+    .gameplay-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .gameplay-card {
+        background: rgba(138, 91, 226, 0.1);
+        padding: 2rem;
+        border-radius: 1rem;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .gameplay-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .gameplay-card h3 {
+        color: #fff;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+
+    .gameplay-card p {
+        color: #cdcdcd;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    /* Adjusted responsive design for smaller screens */
+    @media (max-width: 768px) {
+        .features-grid {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            padding: 1rem;
+        }
+
+        .feature-card {
+            padding: 3rem 2rem;
+            min-height: 300px;
+        }
+    }
+</style>

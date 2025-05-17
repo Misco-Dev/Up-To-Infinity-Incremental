@@ -1,47 +1,51 @@
-# Astro Starter Kit: Minimal
+# UP TO INFINITY INCREMENTAL
 
-```sh
-pnpm create astro@latest -- --template minimal
+## 🎮 Description
+An engaging incremental game built with modern web technologies where players progress through infinite levels of achievements and upgrades.
+
+## 🚀 Technologies
+- Astro
+- TypeScript
+- React
+- Tailwind CSS
+
+## ✨ Features
+- Infinite progression system
+- Dynamic upgrades and achievements
+- Modern and responsive UI
+- Cross-platform compatibility
+- Real-time saving system
+
+## 🛠️ Installation
+```bash
+# Clone the repository
+git clone https://github.com/misco-j/Up-To-Infinity-Incremental.git
+
+# Navigate to project directory
+cd uptoinfinityincremental
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## 🔧 Development
+```bash
+# Build for production
+npm run build
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+# Preview production build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 🤝 Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## 📝 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## 🔗 Links
+- [Discord Server](https://discord.gg/6pzc7Dny)
+- [Twitter](https://twitter.com/)

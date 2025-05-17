@@ -1,0 +1,194 @@
+---
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout title="Up To Infinity Incremental | Contact">
+    <main role="main">
+        <div class="contact-container">
+            <div class="contact-card">
+                <h1 class="title">Contact us</h1>
+                <p class="subtitle">Join our community and stay updated</p>
+                
+                <div class="social-links">
+                    <a href="https://discord.gg/6pzc7Dny" target="_blank" class="social-link discord">
+                        <span class="social-icon">📱</span>
+                        <span class="social-name">Discord</span>
+                        <span class="social-description">Join our community</span>
+                    </a>
+                    
+                    <a href="/" target="_blank" class="social-link twitter">
+                        <span class="social-icon">🐦</span>
+                        <span class="social-name">Twitter</span>
+                        <span class="social-description">Follow for updates</span>
+                    </a>
+                </div>
+
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    <p>For business inquiries or support:</p>
+                    <a href="mailto:contact@qronexstudio.com" class="email-link">
+                        contact@qronexstudio.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout>
+
+<style>
+    body{
+		margin: 0;
+		font-family: 'fredoka', sans-serif;
+		font-weight: 700;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		color: #cdcdcd;
+		background-color: #000; 
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: url('/image/background.webp') center center / cover no-repeat fixed;
+		opacity: 0.5;
+		z-index: -2;
+	}
+
+	body::after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(180deg, #0005 0%, #000b 100%);
+		z-index: -1;
+	}
+
+    .contact-container {
+        min-height: 80vh;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+    }
+
+    .contact-card {
+        width: 100%;
+        max-width: 800px;
+        padding: 3rem;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 24px;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        text-align: center;
+    }
+
+    .title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        margin-bottom: 0.5rem;
+        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+        font-size: 1.2rem;
+        color: #cdcdcd;
+        margin-bottom: 3rem;
+    }
+
+    .social-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .social-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        text-decoration: none;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .social-link:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    .social-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .social-name {
+        font-size: 1.25rem;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .social-description {
+        color: #cdcdcd;
+        font-size: 0.9rem;
+    }
+
+    .contact-info {
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-info h2 {
+        font-size: 1.5rem;
+        color: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .contact-info p {
+        color: #cdcdcd;
+        margin-bottom: 1rem;
+    }
+
+    .email-link {
+        color: #8a5be2;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+        font-weight: bold;
+    }
+
+    .email-link:hover {
+        border-color: #8a5be2;
+    }
+
+    @media (max-width: 768px) {
+        .contact-container {
+            padding: 1rem;
+        }
+
+        .contact-card {
+            padding: 2rem 1rem;
+        }
+
+        .social-links {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+</style>
+
+

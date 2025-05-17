@@ -1,0 +1,115 @@
+---
+const { title } = Astro.props
+import Header from "@/components/header.astro"
+import Footer from "@/components/footer.astro"
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<meta name="robots" content="noarchive nosnippet">
+    	<meta name="author" content="qronexstudio">
+    	<meta name="title" content="up to infinity incremental">
+    	<meta name="description" content="this website is about explaining how the game works">
+    	<meta name="keywords" content="up to infinity incremental,up to infinity incremental roblox,qronexstudio,qronex studio,qronexstudio roblox,qronex studio roblox,incremnetal roblox,qronex devs,qronex_devs,qronex devs roblox,qronex_devs roblox,slakoth devs,slakoth_devs,slakoth devs roblox,slakoth_devs roblox">
+    	<meta property="og:type" content="website" />
+    	<meta property="og:url" content="https://uptoinfinityincremental.work.gd/" />
+    	<meta property="og:title" content="Up To Infinity Incremental" />
+    	<meta property="og:description" content="is a roblox game consisting of an incremental infinity" />
+    	<meta property="og:image" content="https://uptoinfinityincremental.work.gd/assets/icon.png" />
+    	<meta property="twitter:card" content="summary_large_image" />
+    	<meta property="twitter:url" content="https://uptoinfinityincremental.work.gd/" />
+    	<meta property="twitter:title" content="Up To Infinity Incremental" />
+    	<meta property="twitter:description" content="is a roblox game consisting of an incremental infinity" />
+    	<meta property="twitter:image" content="https://uptoinfinityincremental.work.gd/assets/icon.png" />
+    	<meta name="mobile-web-app-capable" content="yes">
+    	<meta name="apple-mobile-web-app-title" content="Up To Infinity Incremental">
+		<link rel="icon" type="image/png" href="../../public/image/icon.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Header></Header>
+		<slot />
+		<Footer></Footer>
+	</body>
+</html>
+<style>
+	body{
+		margin: 0;
+		font-family: 'fredoka', sans-serif;
+		font-weight: 700;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		color: #cdcdcd;
+		background-color: #000; 
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: url('/image/background.webp') center center / cover no-repeat fixed;
+		opacity: 0.5;
+		z-index: -2;
+	}
+
+	body::after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(180deg, #0005 0%, #000b 100%);
+		z-index: -1;
+	}
+
+	main{
+		flex: 1;
+	}
+
+	
+
+
+
+
+	@font-face {
+		font-family: 'fredoka';
+		src: url('/fonts/Fredoka-Light.ttf');
+		font-weight: 200;
+	}
+
+	@font-face {
+		font-family: 'fredoka';
+		src: url('/fonts/Fredoka-Regular.ttf');
+		font-weight: 400;
+	}
+
+	@font-face {
+		font-family: 'fredoka';
+		src: url('/fonts/Fredoka-Medium.ttf');
+		font-weight: 600;
+	}
+
+	@font-face {
+		font-family: 'fredoka';
+		src: url('/fonts/Fredoka-SemiBold.ttf');
+		font-weight: 800;
+	}
+
+	@font-face {
+		font-family: 'fredoka';
+		src: url('/fonts/Fredoka-Bold.ttf');
+		font-weight: 900;
+	}
+</style>

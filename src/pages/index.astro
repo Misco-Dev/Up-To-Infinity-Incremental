@@ -1,16 +1,214 @@
 ---
-
+import Layout from "@/layouts/Layout.astro"
+import Countdown from "@/components/countdown.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Up To Infinity Incremental">
+    <main role="main">
+        <div class="hero-section">
+            <div class="container" role="textbox" aria-label="Introducing content">
+                <h1 class="title" role="heading">Up To Infinity Incremental</h1>
+                <p class="introduction" role="complementary">Welcome to the Future of Incremental Games</p>
+                <p class="introduction-content" role="contentinfo">How this game works?</p>
+                <p role="definition" class="introduction-content-description">
+                    This game works by getting infinities, which you can later use for better upgrades to get better at the game
+                </p>
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="feature-icon">∞</span>
+                        <h4>Infinite Possibilities</h4>
+                        <p>Unlock endless upgrades and achievements</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">⚡</span>
+                        <h4>Fast Progress</h4>
+                        <p>Quick and satisfying progression system</p>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎮</span>
+                        <h4>Dynamic Gameplay</h4>
+                        <p>Engaging mechanics that keep you coming back</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="countdown-section">
+            <h3 class="countdown-text">The game will be released in</h3>
+            <Countdown />
+        </div>
+    </main>
+</Layout>
+
+<style>
+    body{
+		margin: 0;
+		font-family: 'fredoka', sans-serif;
+		font-weight: 700;
+		position: relative;
+		width: 100vw;
+		height: 100vh;
+		color: #cdcdcd;
+		background-color: #000; 
+		overflow-x: hidden;
+		display: flex;
+		flex-direction: column;
+	}
+
+	body::before {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: url('/image/background.webp') center center / cover no-repeat fixed;
+		opacity: 0.5;
+		z-index: -2;
+	}
+
+	body::after {
+		content: "";
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: linear-gradient(180deg, #0005 0%, #000b 100%);
+		z-index: -1;
+	}
+    
+    .hero-section {
+        min-height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 3rem;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .container:hover {
+        transform: translateY(-5px);
+		backdrop-filter: blur(0);
+        box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+    }
+
+    .title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1.5rem;
+        text-shadow: none;
+    }
+
+    .introduction {
+        font-size: clamp(1.5rem, 3vw, 2.5rem);
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 1.5rem 0;
+        letter-spacing: 0.1em;
+    }
+
+    .introduction-content {
+        font-size: clamp(1.25rem, 2.5vw, 2rem);
+        color: #eee;
+        margin: 1rem 0;
+    }
+
+    .introduction-content-description {
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        color: #ddd;
+        margin: 1rem auto;
+        max-width: 800px;
+        line-height: 1.6;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+        padding: 1rem;
+    }
+
+    .feature-item {
+        padding: 1.5rem;
+        background: rgba(138, 91, 226, 0.1);
+        border-radius: 16px;
+        transition: transform 0.3s ease;
+    }
+
+    .feature-item:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+
+    .feature-item h4 {
+        font-size: 1.25rem;
+        color: #fff;
+        margin: 0.5rem 0;
+    }
+
+    .feature-item p {
+        color: #ddd;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .countdown-section {
+        text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    .countdown-text {
+        font-size: clamp(1.5rem, 3vw, 2rem);
+        color: #fff;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 1rem;
+            min-height: 60vh;
+        }
+
+        .container {
+            padding: 2rem 1rem;
+        }
+
+        .features {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+    }
+</style>
+
+
+
+
