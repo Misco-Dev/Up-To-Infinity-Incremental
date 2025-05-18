@@ -28,19 +28,19 @@ git clone https://github.com/misco-j/Up-To-Infinity-Incremental.git
 cd uptoinfinityincremental
 
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm run dev
 ```
 
 ## 🔧 Development
 ```bash
 # Build for production
-npm run build
+pnpm run build
 
 # Preview production build
-npm run preview
+pnpm run preview
 ```
 
 ## 🤝 Contributing
