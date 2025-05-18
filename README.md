@@ -1,5 +1,8 @@
 # UP TO INFINITY INCREMENTAL
 
+![Up To Infinity Incremental](/public/image/background.webp)
+
+
 ## 🎮 Description
 An engaging incremental game built with modern web technologies where players progress through infinite levels of achievements and upgrades.
 
@@ -45,6 +48,8 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+![Logo](/public/image/icon.png)
 
 ## 🔗 Links
 - [Discord Server](https://discord.gg/6pzc7Dny)
