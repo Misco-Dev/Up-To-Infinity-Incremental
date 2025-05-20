@@ -9,8 +9,7 @@ An engaging incremental game built with modern web technologies where players pr
 ## 🚀 Technologies
 - Astro
 - TypeScript
-- React
-- Tailwind CSS
+- CSS
 
 ## ✨ Features
 - Infinite progression system
