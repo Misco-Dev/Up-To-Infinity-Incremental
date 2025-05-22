@@ -1,0 +1,145 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Terms of Use | Up To Infinity Incremental">
+  <main class="terms-container" role="main">
+    <section class="terms-card">
+      <h1 class="title">Terms of Use</h1>
+      <p class="subtitle">Rules and regulations for using our website and services.</p>
+
+      <article class="terms-content">
+        <h2>Acceptance of Terms</h2>
+        <p>
+          By accessing or using our website, you agree to comply with and be bound by these Terms of Use.
+          If you do not agree to these terms, please do not use our services.
+        </p>
+
+        <h2>User Responsibilities</h2>
+        <p>
+          Users must use the website in a lawful manner and not engage in any activity that may harm, disrupt, or interfere with the services or other users.
+        </p>
+
+        <h2>Intellectual Property</h2>
+        <p>
+          All content, trademarks, and intellectual property on this site are owned by or licensed to us.
+          Unauthorized use or reproduction of materials is prohibited.
+        </p>
+
+        <h2>Limitation of Liability</h2>
+        <p>
+          We are not liable for any damages arising from the use or inability to use the website.
+          Use the services at your own risk.
+        </p>
+
+        <h2>Changes to Terms</h2>
+        <p>
+          We reserve the right to modify these terms at any time.
+          Continued use of the website after changes implies acceptance of the updated terms.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For questions regarding these Terms of Use, contact us at
+          <a href="mailto:qronexstudios@gmail.com" class="email-link">qronexstudios@gmail.com</a>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .terms-container {
+      max-width: 900px;
+      margin: 4rem auto 6rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255 255 255 / 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 0.5s ease forwards;
+      opacity: 0;
+      cursor: default;
+    }
+
+    .terms-card {
+      color: #eee;
+      user-select: none;
+    }
+
+    .title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #8a5be2, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+      animation: fadeInUp 0.5s ease forwards;
+      opacity: 0;
+      animation-delay: 0.2s;
+      transform: translateY(20px);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #cdcdcd;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeInUp 0.5s ease forwards;
+      animation-delay: 0.4s;
+      transform: translateY(20px);
+    }
+
+    .terms-content h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      color: #fff;
+    }
+
+    .terms-content p {
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .email-link {
+      color: #8a5be2;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      font-weight: 600;
+    }
+
+    .email-link:hover {
+      border-color: #8a5be2;
+    }
+
+    @media (max-width: 600px) {
+      .terms-container {
+        margin: 2rem 1rem 3rem;
+        padding: 1.5rem;
+      }
+
+      .title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</Layout>

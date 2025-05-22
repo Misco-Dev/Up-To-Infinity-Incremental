@@ -1,42 +1,74 @@
 <header role="banner">
     <nav class="navbar" role="navigation">
-        <ul class="nav-links" role="list">
-            <li><a href="/" class="nav-link" aria-label="Home" role="link">Home</a></li>
-            <li><a href="/feature/" class="nav-link" aria-label="Features" role="link">Features</a></li>
-            <li><a href="/about/" class="nav-link" aria-label="About us" role="link">About</a></li>
-            <li><a href="/contact/" class="nav-link" aria-label="Contact us" role="link">Contact</a></li>
-        </ul>
+        <div class="nav-container">
+            <a href="/" class="logo" aria-label="Home">Up To Infinity Incremental</a>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open menu" />
+            <label for="menu-toggle" class="menu-icon" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </label>
+            <ul class="nav-links" role="list">
+                <li><a href="/" class="nav-link" aria-label="Home" role="link">Home</a></li>
+                <li><a href="/feature/" class="nav-link" aria-label="Features" role="link">Features</a></li>
+                <li><a href="/about/" class="nav-link" aria-label="About us" role="link">About</a></li>
+                <li><a href="/contact/" class="nav-link" aria-label="Contact us" role="link">Contact</a></li>
+            </ul>
+        </div>
     </nav>
 </header>
 
 <style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        padding-top: 70px;;
+    }
 
     .navbar {
-		background-color: #000b;
-		padding: 15px 20px;
-		position: sticky;
-		top: 0;
-		width: 100%;
-		z-index: 10;
-		box-shadow: 0 2px 8px #0008;
-		box-sizing: border-box;
-		font-size: 24px;
-	}
+        background-color: #000b;
+        padding: 15px 20px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        box-shadow: 0 2px 8px #0008;
+        font-size: 24px;
+    }
 
-	.nav-links {
-		list-style: none;
-		display: flex;
-		justify-content: center;
-		margin: 0;
-		padding: 0;
-	}
+    .nav-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+    }
 
-	.nav-links li {
-		position: relative;
-		margin: 0 15px;
-	}
+    .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
 
-	.nav-link {
+    .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links li {
+        position: relative;
+        margin: 0 15px;
+    }
+
+    .nav-link {
         color: inherit;
         text-decoration: none;
         font-weight: 700;
@@ -70,6 +102,7 @@
     .nav-link:hover {
         background-position: 0%;
         transform: translateY(-2px);
+        text-shadow: 0 0 8px rgba(138, 91, 226, 0.5);
     }
 
     .nav-link:hover::after {
@@ -77,8 +110,51 @@
         box-shadow: 0 0 12px rgba(138, 91, 226, 0.5);
     }
 
-	/* Efecto de brillo al hover */
-	.nav-link:hover {
-		text-shadow: 0 0 8px rgba(138, 91, 226, 0.5);
-	}
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-icon {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 5px;
+        margin-right: 10px;
+    }
+
+    .menu-icon span {
+        height: 3px;
+        width: 25px;
+        background: white;
+        border-radius: 3px;
+    }
+
+    @media (max-width: 768px) {
+        .nav-links {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #000c;
+            flex-direction: column;
+            align-items: center;
+            height: 0;
+            overflow: hidden;
+            transition: height 0.3s ease-in-out;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-links li {
+            margin: 10px 0;
+        }
+
+        .menu-icon {
+            display: flex;
+        }
+
+        .menu-toggle:checked + .menu-icon + .nav-links {
+            height: 200px;
+        }
+    }
 </style>

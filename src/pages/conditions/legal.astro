@@ -1,0 +1,139 @@
+---
+import Layout from '@/layouts/Layout.astro';
+---
+
+<Layout title="Legal | Up To Infinity Incremental">
+  <main class="legal-container" role="main">
+    <section class="legal-card">
+      <h1 class="title">Legal Information</h1>
+      <p class="subtitle">Important disclaimers and policies related to our website and services.</p>
+
+      <article class="legal-content">
+        <h2>Disclaimer</h2>
+        <p>
+          The information provided on this website is for general informational purposes only.
+          We make no representations or warranties of any kind, express or implied, about
+          the completeness, accuracy, reliability, suitability, or availability with respect
+          to the website or the information, products, services, or related graphics contained
+          on the website for any purpose. Any reliance you place on such information is therefore
+          strictly at your own risk.
+        </p>
+
+        <h2>Privacy Policy</h2>
+        <p>
+          We respect your privacy and are committed to protecting your personal data. We do not
+          collect personal information without your consent. For more details, please refer to
+          our Privacy Policy.
+        </p>
+
+        <h2>Terms of Service</h2>
+        <p>
+          By using this website, you agree to comply with our Terms of Service, which govern
+          the use of our services. Please read them carefully.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For any legal questions or concerns, please contact us at
+          <a href="mailto:qronexstudios@gmail.com" class="email-link">qronexstudios@gmail.com</a>.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <style>
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .legal-container {
+      max-width: 900px;
+      margin: 4rem auto 6rem;
+      padding: 2rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 1rem;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255 255 255 / 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 0.5s ease forwards;
+      opacity: 0;
+      cursor: default;
+    }
+
+    .legal-card {
+      color: #eee;
+      user-select: none;
+    }
+
+    .title {
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 800;
+      background: linear-gradient(135deg, #8a5be2, #ff69b4);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.5rem;
+      animation: fadeInUp 0.5s ease forwards;
+      opacity: 0;
+      animation-delay: 0.2s;
+      transform: translateY(20px);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #cdcdcd;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeInUp 0.5s ease forwards;
+      animation-delay: 0.4s;
+      transform: translateY(20px);
+    }
+
+    .legal-content h2 {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+      margin-bottom: 0.8rem;
+      color: #fff;
+    }
+
+    .legal-content p {
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+
+    .email-link {
+      color: #8a5be2;
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s ease;
+      font-weight: 600;
+    }
+
+    .email-link:hover {
+      border-color: #8a5be2;
+    }
+
+    @media (max-width: 600px) {
+      .legal-container {
+        margin: 2rem 1rem 3rem;
+        padding: 1.5rem;
+      }
+
+      .title {
+        font-size: clamp(1.8rem, 7vw, 2.5rem);
+      }
+
+      .subtitle {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+    }
+  </style>
+</Layout>
