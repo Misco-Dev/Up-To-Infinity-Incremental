@@ -3,132 +3,132 @@ import Layout from '@/layouts/Layout.astro';
 ---
 
 <Layout title="Privacy Policy | Up To Infinity Incremental">
-  <main class="privacy-container" role="main">
-    <section class="privacy-card">
-      <h1 class="title">Privacy Policy</h1>
-      <p class="subtitle">How we collect, use, and protect your data.</p>
+    <main class="privacy-container" role="main">
+        <section class="privacy-card">
+        <h1 class="title">Privacy Policy</h1>
+        <p class="subtitle">How we collect, use, and protect your data.</p>
 
-      <article class="privacy-content">
-        <h2>Data Collection</h2>
-        <p>
-          We collect minimal personal information to provide and improve our services.
-          This may include data you provide directly and data collected automatically such as usage statistics.
-        </p>
+        <article class="privacy-content">
+            <h2>Data Collection</h2>
+            <p>
+            We collect minimal personal information to provide and improve our services.
+            This may include data you provide directly and data collected automatically such as usage statistics.
+            </p>
 
-        <h2>Use of Data</h2>
-        <p>
-          Your data is used to personalize your experience, improve our services, and communicate important updates.
-          We do not sell or share your personal information with third parties without your consent.
-        </p>
+            <h2>Use of Data</h2>
+            <p>
+            Your data is used to personalize your experience, improve our services, and communicate important updates.
+            We do not sell or share your personal information with third parties without your consent.
+            </p>
 
-        <h2>Data Protection</h2>
-        <p>
-          We implement industry-standard security measures to protect your data from unauthorized access, alteration, or destruction.
-          However, no internet transmission is completely secure, so please be mindful when sharing sensitive information.
-        </p>
+            <h2>Data Protection</h2>
+            <p>
+            We implement industry-standard security measures to protect your data from unauthorized access, alteration, or destruction.
+            However, no internet transmission is completely secure, so please be mindful when sharing sensitive information.
+            </p>
 
-        <h2>Your Rights</h2>
-        <p>
-          You have the right to access, correct, or delete your personal information. For any privacy-related inquiries, please contact us at
-          <a href="mailto:qronexstudios@gmail.com" class="email-link">qronexstudios@gmail.com</a>.
-        </p>
-      </article>
-    </section>
-  </main>
+            <h2>Your Rights</h2>
+            <p>
+            You have the right to access, correct, or delete your personal information. For any privacy-related inquiries, please contact us at
+            <a href="mailto:qronexstudios@gmail.com" class="email-link">qronexstudios@gmail.com</a>.
+            </p>
+        </article>
+        </section>
+    </main>
 
-  <style>
-    @keyframes fadeInUp {
-      from {
+    <style>
+        @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+        .privacy-container {
+        max-width: 900px;
+        margin: 4rem auto 6rem;
+        padding: 2rem;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 1rem;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255 255 255 / 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        animation: fadeInUp 0.5s ease forwards;
         opacity: 0;
+        cursor: default;
+        }
+
+        .privacy-card {
+        color: #eee;
+        user-select: none;
+        }
+
+        .title {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 0.5rem;
+        animation: fadeInUp 0.5s ease forwards;
+        opacity: 0;
+        animation-delay: 0.2s;
         transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+        }
 
-    .privacy-container {
-      max-width: 900px;
-      margin: 4rem auto 6rem;
-      padding: 2rem;
-      background: rgba(0, 0, 0, 0.5);
-      border-radius: 1rem;
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255 255 255 / 0.1);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-      animation: fadeInUp 0.5s ease forwards;
-      opacity: 0;
-      cursor: default;
-    }
+        .subtitle {
+        font-size: 1.2rem;
+        color: #cdcdcd;
+        margin-bottom: 2.5rem;
+        opacity: 0;
+        animation: fadeInUp 0.5s ease forwards;
+        animation-delay: 0.4s;
+        transform: translateY(20px);
+        }
 
-    .privacy-card {
-      color: #eee;
-      user-select: none;
-    }
+        .privacy-content h2 {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        margin-bottom: 0.8rem;
+        color: #fff;
+        }
 
-    .title {
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 800;
-      background: linear-gradient(135deg, #8a5be2, #ff69b4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 0.5rem;
-      animation: fadeInUp 0.5s ease forwards;
-      opacity: 0;
-      animation-delay: 0.2s;
-      transform: translateY(20px);
-    }
+        .privacy-content p {
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 1.5rem;
+        }
 
-    .subtitle {
-      font-size: 1.2rem;
-      color: #cdcdcd;
-      margin-bottom: 2.5rem;
-      opacity: 0;
-      animation: fadeInUp 0.5s ease forwards;
-      animation-delay: 0.4s;
-      transform: translateY(20px);
-    }
+        .email-link {
+        color: #8a5be2;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+        font-weight: 600;
+        }
 
-    .privacy-content h2 {
-      font-size: 1.5rem;
-      margin-top: 2rem;
-      margin-bottom: 0.8rem;
-      color: #fff;
-    }
+        .email-link:hover {
+        border-color: #8a5be2;
+        }
 
-    .privacy-content p {
-      line-height: 1.6;
-      color: #ccc;
-      margin-bottom: 1.5rem;
-    }
+        @media (max-width: 600px) {
+        .privacy-container {
+            margin: 2rem 1rem 3rem;
+            padding: 1.5rem;
+        }
 
-    .email-link {
-      color: #8a5be2;
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: border-color 0.3s ease;
-      font-weight: 600;
-    }
+        .title {
+            font-size: clamp(1.8rem, 7vw, 2.5rem);
+        }
 
-    .email-link:hover {
-      border-color: #8a5be2;
-    }
-
-    @media (max-width: 600px) {
-      .privacy-container {
-        margin: 2rem 1rem 3rem;
-        padding: 1.5rem;
-      }
-
-      .title {
-        font-size: clamp(1.8rem, 7vw, 2.5rem);
-      }
-
-      .subtitle {
-        font-size: 1rem;
-        margin-bottom: 2rem;
-      }
-    }
-  </style>
+        .subtitle {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+        }
+    </style>
 </Layout>
