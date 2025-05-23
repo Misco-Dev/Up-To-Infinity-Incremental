@@ -5,9 +5,4 @@ export default defineConfig({
     integrations: [image({
         serviceEntryPoint: '@astrojs/image/static',
     })],
-    image: {
-        service: {
-            entrypoint: "astro/assets/services/static",
-        },
-    },
 });
