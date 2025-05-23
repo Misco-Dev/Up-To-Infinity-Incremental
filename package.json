@@ -10,7 +10,8 @@
     "deploy": "astro build && gh-pages -d dist"
   },
   "dependencies": {
-    "astro": "^5.7.12"
+    "astro": "^5.7.12",
+    "sharp": "^0.34.2"
   },
   "packageManager": "pnpm@8.15.4"
 }
