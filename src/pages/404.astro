@@ -16,7 +16,7 @@ import Layout from "@/layouts/Layout.astro"
         background: linear-gradient(45deg, #fff, #f0f0f0);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        text-shadow: 0 0 30px #ffffff80;
         animation: glow 3s ease-in-out infinite;
         text-align: center;
         width: 100%;
@@ -24,8 +24,8 @@ import Layout from "@/layouts/Layout.astro"
         .incorrect-route {
         font-size: 1.8rem;
         margin: 1rem 0 2rem;
-        color: rgba(255, 255, 255, 0.85);
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        color: #ffffffd9;
+        text-shadow: 0 2px 6px #0000004d;
         }
         .go-back {
         display: inline-block;
@@ -33,25 +33,25 @@ import Layout from "@/layouts/Layout.astro"
         font-size: 1.25rem;
         font-weight: bold;
         color: #fff;
-        background: rgba(255, 255, 255, 0.15);
-        border: 2px solid rgba(255, 255, 255, 0.3);
+        background: #ffffff26;
+        border: 2px solid #ffffff4d;
         border-radius: 50px;
         text-decoration: none;
         transition: all 0.3s ease;
         backdrop-filter: blur(6px);
         }
         .go-back:hover {
-        background: rgba(255, 255, 255, 0.3);
-        border-color: rgba(255, 255, 255, 0.5);
+        background: #ffffff4d;
+        border-color: #ffffff80;
         transform: translateY(-3px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 16px #00000033;
         }
         @keyframes glow {
         0%, 100% {
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            text-shadow: 0 0 30px #ffffff80;
         }
         50% {
-            text-shadow: 0 0 60px rgba(255, 255, 255, 1);
+            text-shadow: 0 0 60px #ffffffff;
         }
         }
         body:hover {
