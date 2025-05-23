@@ -1,17 +1,19 @@
 <header role="banner">
     <nav class="navbar" role="navigation">
         <div class="nav-container">
-            <a href="/" class="logo" aria-label="Home">Up To Infinity Incremental</a>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Open menu" />
-            <label for="menu-toggle" class="menu-icon" aria-hidden="true">
-                <span></span><span></span><span></span>
-            </label>
-            <ul class="nav-links" role="list">
-                <li><a href="/" class="nav-link" aria-label="Home" role="link">Home</a></li>
-                <li><a href="/feature/" class="nav-link" aria-label="Features" role="link">Features</a></li>
-                <li><a href="/about/" class="nav-link" aria-label="About us" role="link">About</a></li>
-                <li><a href="/contact/" class="nav-link" aria-label="Contact us" role="link">Contact</a></li>
-            </ul>
+        <a href="/" class="logo" aria-label="Home">Up To Infinity Incremental</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <ul class="nav-links" role="list">
+            <li><a href="/" class="nav-link" role="link">Home</a></li>
+            <li><a href="/feature/" class="nav-link" role="link">Features</a></li>
+            <li><a href="/about/" class="nav-link" role="link">About</a></li>
+            <li><a href="/contact/" class="nav-link" role="link">Contact</a></li>
+        </ul>
         </div>
     </nav>
 </header>
@@ -24,7 +26,9 @@
     }
 
     body {
-        padding-top: 70px;;
+        padding-top: 70px;
+        overflow-x: hidden;
+        font-family: sans-serif;
     }
 
     .navbar {
@@ -64,7 +68,6 @@
     }
 
     .nav-links li {
-        position: relative;
         margin: 0 15px;
     }
 
@@ -76,7 +79,6 @@
         padding: 0.5rem 1rem;
         position: relative;
         transition: all 0.3s ease;
-        font-family: inherit;
         border-radius: 8px;
         background: linear-gradient(90deg, #8a5be2, #ff69b4);
         background-size: 200% 100%;
@@ -94,8 +96,6 @@
         height: 2px;
         background: linear-gradient(90deg, #8a5be2, #ff69b4);
         transition: all 0.3s ease;
-        transform-origin: left;
-        border-radius: 1px;
         box-shadow: 0 0 8px rgba(138, 91, 226, 0.3);
     }
 
@@ -107,7 +107,6 @@
 
     .nav-link:hover::after {
         width: 100%;
-        box-shadow: 0 0 12px rgba(138, 91, 226, 0.5);
     }
 
     .menu-toggle {
@@ -117,44 +116,75 @@
     .menu-icon {
         display: none;
         flex-direction: column;
+        justify-content: center;
         cursor: pointer;
-        gap: 5px;
-        margin-right: 10px;
+        gap: 6px;
+        width: 30px;
+        height: 25px;
+        z-index: 1100;
     }
 
     .menu-icon span {
         height: 3px;
-        width: 25px;
-        background: white;
+        width: 100%;
+        background-color: white;
         border-radius: 3px;
+        transition: all 0.4s ease;
+        transform-origin: center;
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+        transform: rotate(45deg) translateY(12.5px);
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+
+    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-12.5px);
     }
 
     @media (max-width: 768px) {
+        .menu-icon {
+        display: flex;
+        }
+
         .nav-links {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: #000c;
-            flex-direction: column;
-            align-items: center;
-            height: 0;
-            overflow: hidden;
-            transition: height 0.3s ease-in-out;
-            padding: 0;
-            margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #000c;
+        flex-direction: column;
+        align-items: center;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease-in-out;
         }
 
         .nav-links li {
-            margin: 10px 0;
+        margin: 10px 0;
         }
 
-        .menu-icon {
-            display: flex;
-        }
-
-        .menu-toggle:checked + .menu-icon + .nav-links {
-            height: 200px;
+        .menu-toggle:checked ~ .nav-links {
+        height: 200px;
         }
     }
 </style>
+
+<script>
+    document.addEventListener('click', function (event) {
+        const toggle = document.getElementById('menu-toggle');
+        const icon = document.querySelector('.menu-icon');
+        const links = document.querySelector('.nav-links');
+
+        const isClickInside = toggle.contains(event.target) || icon.contains(event.target) || links.contains(event.target);
+
+        if (!isClickInside && toggle.checked) {
+        toggle.checked = false;
+        }
+    });
+</script>
+
