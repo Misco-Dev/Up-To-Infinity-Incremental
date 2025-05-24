@@ -10,7 +10,6 @@
     "deploy": "astro build && gh-pages -d dist"
   },
   "dependencies": {
-    "@astrojs/image": "^0.18.0",
     "astro": "^5.7.12",
     "sharp": "^0.34.2"
   },

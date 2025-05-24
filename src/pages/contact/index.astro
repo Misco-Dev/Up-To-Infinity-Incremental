@@ -1,5 +1,7 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import Discord from "@/assets/svg/discord.svg"
+import X from "@/assets/svg/twitter.svg"
 ---
 
 <Layout title="Contact Us | Up To Infinity Incremental">
@@ -11,13 +13,13 @@ import Layout from "@/layouts/Layout.astro";
 
             <div class="social-links">
             <a href="https://discord.gg/RnQP9BQjge" target="_blank" class="social-link discord">
-                <span class="social-icon">📱</span>
+                <Discord class="social-icon"/>
                 <span class="social-name">Discord</span>
                 <span class="social-description">Join our community</span>
             </a>
 
             <a href="https://x.com/Qronex_Dev" target="_blank" class="social-link twitter">
-                <span class="social-icon">🐦</span>
+                <X class="social-icon"/>
                 <span class="social-name">Twitter</span>
                 <span class="social-description">Follow for updates</span>
             </a>
@@ -129,6 +131,8 @@ import Layout from "@/layouts/Layout.astro";
     }
 
     .social-icon {
+        height: 40px;
+        width: 40px;
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }

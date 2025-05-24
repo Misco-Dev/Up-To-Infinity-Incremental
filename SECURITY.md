@@ -1,6 +1,6 @@
 # Security Policy
 
-## Supported Versions
+## Astro Supported Versions
 
 These are the versions supported by our project.
 
