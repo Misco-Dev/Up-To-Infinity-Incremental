@@ -10,6 +10,7 @@ An engaging incremental game built with modern web technologies where players pr
 - Astro
 - TypeScript
 - CSS
+-JavaScript
 
 ## ✨ Features
 - Infinite progression system
@@ -48,8 +49,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📝 License
 This project is licensed under the Apache License 2.0- see the [LICENSE](LICENSE) file for details.
 
+## 🔗 Links
+- [Discord Server](https://discord.gg/RnQP9BQjge)
+- [Twitter](https://x.com/Qronex_Dev)
+
 ![Logo](/public/image/icon.png)
 
-## 🔗 Links
-- [Discord Server](https://discord.gg/6pzc7Dny)
-- [Twitter](https://twitter.com/)
