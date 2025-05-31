@@ -29,6 +29,79 @@ import Footer from "@/components/footer.astro"
 		<link rel="icon" type="image/ico" href="/image/icon.ico" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<style is:global>
+			body{
+				margin: 0;
+				font-family: 'fredoka', sans-serif;
+				font-weight: 700;
+				position: relative;
+				width: 100vw;
+				height: 100vh;
+				color: #cdcdcd;
+				background-color: #000; 
+				overflow-x: hidden;
+				display: flex;
+				flex-direction: column;
+			}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background: url('/image/background.webp') center center / cover no-repeat fixed;
+				opacity: 0.5;
+				z-index: -2;
+			}
+
+			body::after {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				background: linear-gradient(180deg, #0005 0%, #000b 100%);
+				z-index: -1;
+			}
+
+			
+
+
+
+
+			@font-face {
+				font-family: 'fredoka';
+				src: url('/fonts/Fredoka-Light.woff2') format('woff2');
+				font-weight: 200;
+			}
+
+			@font-face {
+				font-family: 'fredoka';
+				src: url('/fonts/Fredoka-Regular.woof2') format('woff2');
+				font-weight: 400;
+			}
+
+			@font-face {
+				font-family: 'fredoka';
+				src: url('/fonts/Fredoka-Medium.woff2') format('woff2');
+				font-weight: 600;
+			}
+
+			@font-face {
+				font-family: 'fredoka';
+				src: url('/fonts/Fredoka-SemiBold.woff2') format('woff2');
+				font-weight: 800;
+			}
+
+			@font-face {
+				font-family: 'fredoka';
+				src: url('/fonts/Fredoka-Bold.woff2') format('woff2');
+				font-weight: 900;
+			}
+		</style>
 	</head>
 	<body>
 		<Header></Header>
@@ -36,76 +109,3 @@ import Footer from "@/components/footer.astro"
 		<Footer></Footer>
 	</body>
 </html>
-<style>
-	body{
-		margin: 0;
-		font-family: 'fredoka', sans-serif;
-		font-weight: 700;
-		position: relative;
-		width: 100vw;
-		height: 100vh;
-		color: #cdcdcd;
-		background-color: #000; 
-		overflow-x: hidden;
-		display: flex;
-		flex-direction: column;
-	}
-
-	body::before {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: url('/image/background.webp') center center / cover no-repeat fixed;
-		opacity: 0.5;
-		z-index: -2;
-	}
-
-	body::after {
-		content: "";
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
-		background: linear-gradient(180deg, #0005 0%, #000b 100%);
-		z-index: -1;
-	}
-
-	
-
-
-
-
-	@font-face {
-		font-family: 'fredoka';
-		src: url('/fonts/Fredoka-Light.woff2') format('woff2');
-		font-weight: 200;
-	}
-
-	@font-face {
-		font-family: 'fredoka';
-		src: url('/fonts/Fredoka-Regular.woof2') format('woff2');
-		font-weight: 400;
-	}
-
-	@font-face {
-		font-family: 'fredoka';
-		src: url('/fonts/Fredoka-Medium.woff2') format('woff2');
-		font-weight: 600;
-	}
-
-	@font-face {
-		font-family: 'fredoka';
-		src: url('/fonts/Fredoka-SemiBold.woff2') format('woff2');
-		font-weight: 800;
-	}
-
-	@font-face {
-		font-family: 'fredoka';
-		src: url('/fonts/Fredoka-Bold.woff2') format('woff2');
-		font-weight: 900;
-	}
-</style>
