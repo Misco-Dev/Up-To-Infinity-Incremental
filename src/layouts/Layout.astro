@@ -1,77 +1,125 @@
 ---
-const { title } = Astro.props
-import Header from "@/components/header.astro"
-import Footer from "@/components/footer.astro"
+const { title } = Astro.props;
+import Header from "@/components/header.astro";
+import Footer from "@/components/footer.astro";
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="robots" content="noarchive nosnippet">
-    	<meta name="author" content="qronexstudio">
-    	<meta name="title" content="up to infinity incremental">
-    	<meta name="description" content="this website is about explaining how the game works">
-    	<meta name="keywords" content="up to infinity incremental,up to infinity incremental roblox,qronexstudio,qronex studio,qronexstudio roblox,qronex studio roblox,incremnetal roblox,qronex devs,qronex_devs,qronex devs roblox,qronex_devs roblox,slakoth devs,slakoth_devs,slakoth devs roblox,slakoth_devs roblox">
-    	<meta property="og:type" content="website" />
-    	<meta property="og:url" content="https://uptoinfinityincremental.work.gd/" />
-    	<meta property="og:title" content="Up To Infinity Incremental" />
-    	<meta property="og:description" content="is a roblox game consisting of an incremental infinity" />
-    	<meta property="og:image" content="https://uptoinfinityincremental.work.gd/assets/icon.png" />
-    	<meta property="twitter:card" content="summary_large_image" />
-    	<meta property="twitter:url" content="https://uptoinfinityincremental.work.gd/" />
-    	<meta property="twitter:title" content="Up To Infinity Incremental" />
-    	<meta property="twitter:description" content="is a roblox game consisting of an incremental infinity" />
-    	<meta property="twitter:image" content="https://uptoinfinityincremental.work.gd/assets/icon.png" />
-    	<meta name="mobile-web-app-capable" content="yes">
-    	<meta name="apple-mobile-web-app-title" content="Up To Infinity Incremental">
-		<link rel="icon" type="image/ico" href="/image/icon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-		<style is:global>
-			body{
-				margin: 0;
-				font-family: 'fredoka', sans-serif;
-				font-weight: 700;
-				position: relative;
-				width: 100vw;
-				height: 100vh;
-				color: #cdcdcd;
-				background-color: #000; 
-				overflow-x: hidden;
-				display: flex;
-				flex-direction: column;
-			}
+<html lang="es"> <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow"> <meta name="author" content="Qronex Studio">
+        <meta name="title" content={title ? `${title} | Up To Infinity Incremental` : "Up To Infinity Incremental"} />
+        <meta name="description" content="Up To Infinity Incremental es un juego de Roblox que explica el funcionamiento de un universo incremental infinito. ¡Explora las mecánicas de juego y el progreso sin límites!" />
+        <meta name="keywords" content="up to infinity incremental, up to infinity incremental roblox, qronexstudio, qronex studio, qronexstudio roblox, qronex studio roblox, incremental roblox, qronex devs, qronex_devs, slakoth devs, slakoth_devs, slakoth devs roblox, incremental game, roblox game">
+        <link rel="canonical" href={`https://uptoinfinityincremental.work.gd${Astro.url.pathname}`} /> <meta name="theme-color" content="#8a5be2"> <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://uptoinfinityincremental.work.gd/" />
+        <meta property="og:title" content={title ? `${title} | Up To Infinity Incremental` : "Up To Infinity Incremental"} />
+        <meta property="og:description" content="Descubre Up To Infinity Incremental, el juego de Roblox que te sumerge en un universo incremental infinito. ¡Explora las mecánicas y el progreso sin límites!" />
+        <meta property="og:image" content="https://uptoinfinityincremental.work.gd/assets/icon.png" />
+        <meta property="og:site_name" content="Up To Infinity Incremental" />
 
-			body::before {
-				content: "";
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100vw;
-				height: 100vh;
-				background: url('/image/background.webp') center center / cover no-repeat fixed;
-				opacity: 0.5;
-				z-index: -2;
-			}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://uptoinfinityincremental.work.gd/" />
+        <meta property="twitter:title" content={title ? `${title} | Up To Infinity Incremental` : "Up To Infinity Incremental"} />
+        <meta property="twitter:description" content="Un juego de Roblox donde el progreso nunca termina. ¡Sumérgete en un universo incremental infinito con Up To Infinity Incremental!" />
+        <meta property="twitter:image" content="https://uptoinfinityincremental.work.gd/assets/icon.png" />
+        <meta property="twitter:creator" content="@QronexStudio" />
 
-			body::after {
-				content: "";
-				position: fixed;
-				top: 0;
-				left: 0;
-				width: 100vw;
-				height: 100vh;
-				background: linear-gradient(180deg, #0005 0%, #000b 100%);
-				z-index: -1;
-			}
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-title" content="Up To Infinity Incremental">
+        <link rel="icon" type="image/x-icon" href="/image/icon.ico" /> <link rel="apple-touch-icon" href="/image/icon.png"> <meta name="generator" content={Astro.generator} />
+        <title>{ title }</title>
 
-			
+        <style is:global>
+            :root {
+                --color-primary: #8a5be2;
+                --color-secondary: #ff69b4;
+                --color-accent: #00f0ff;
 
+                --color-text-light: #fff;
+                --color-text-medium: #eee;
+                --color-text-dark: #ddd;
 
+                --color-bg-dark: #000;
+                --color-bg-transparent-dark: rgba(0, 0, 0, 0.7);
+                --color-bg-transparent-light: rgba(255, 255, 255, 0.05);
+                --color-bg-transparent-medium: rgba(255, 255, 255, 0.1);
 
+                --color-shadow-light: rgba(0, 0, 0, 0.2);
+                --color-shadow-medium: rgba(0, 0, 0, 0.4);
+                --color-border-subtle: rgba(255, 255, 255, 0.1);
 
+                --gradient-primary: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+                --gradient-primary-hover: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+
+                --color-discord: #5865f2;
+                --color-twitter: #1DA1F2;
+                --color-github: #333;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                margin: 0;
+                font-family: 'Fredoka', sans-serif;
+                font-weight: 900;
+                position: relative;
+                width: 100vw;
+                min-height: 100vh;
+                color: var(--color-text-medium); 
+                background-color: var(--color-bg-dark); 
+                overflow-x: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+
+            body::before {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: url('/image/background.webp') center center / cover no-repeat fixed;
+                opacity: 0.3;
+                z-index: -2;
+            }
+
+            body::after {
+                content: "";
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%);
+                z-index: -1;
+            }
+
+            h1, h2, h3, h4, h5, h6 {
+                color: var(--color-text-light);
+                font-weight: 700;
+                margin-top: 1em;
+                margin-bottom: 0.5em;
+            }
+
+            p {
+                margin-bottom: 1em;
+                line-height: 1.6;
+            }
+
+            a {
+                color: var(--color-primary);
+                text-decoration: none;
+            }
+
+            a:hover {
+                color: var(--color-secondary);
+                text-decoration: underline;
+            }
 			@font-face {
 				font-family: 'fredoka';
 				src: url('/fonts/Fredoka-Light.woff2') format('woff2');
@@ -101,11 +149,10 @@ import Footer from "@/components/footer.astro"
 				src: url('/fonts/Fredoka-Bold.woff2') format('woff2');
 				font-weight: 900;
 			}
-		</style>
-	</head>
-	<body>
-		<Header></Header>
-		<slot />
-		<Footer></Footer>
-	</body>
+        </style>
+    </head>
+    <body>
+        <Header></Header>
+        <slot /> <Footer></Footer>
+    </body>
 </html>
