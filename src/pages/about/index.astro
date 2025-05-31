@@ -2,45 +2,44 @@
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout title="About Us | Up To Infinity Incremental">
-    <main role="main">
-        <div class="about-container">
-            <section class="hero-section">
-                <h1 class="title">Qronex Studio</h1>
+<Layout title="Acerca de Nosotros | Up To Infinity Incremental">
+    <main role="main" class="about-page-main">
+        <div class="main-container">
+            <section class="hero-section" aria-labelledby="studio-title">
+                <h1 id="studio-title" class="title" role="heading" aria-level="1">Qronex Studio</h1>
                 <p class="subtitle">Creators of Up To Infinity Incremental</p>
             </section>
 
             <section class="content-section">
-                <div class="card about-card-1">
-                    <h2 class="section-title">About The Game</h2>
+                <div class="card about-card-1" role="article" aria-labelledby="about-game-title">
+                    <h2 id="about-game-title" class="section-title" role="heading" aria-level="2">About The Game</h2>
                     <p class="section-text">
                         Up To Infinity Incremental is a unique incremental game that challenges players to reach infinity through strategic upgrades and careful resource management.
                     </p>
                 </div>
 
-                <div class="card about-card-2">
-                    <h2 class="section-title">Our Story</h2>
+                <div class="card about-card-2" role="article" aria-labelledby="our-story-title">
+                    <h2 id="our-story-title" class="section-title" role="heading" aria-level="2">Our Story</h2>
                     <p class="section-text">
-                        Created by <a href="http://qronexstudiosai.work.gd" target="_blank" class="company-link">Qronex Studio</a>, 
-                        we're passionate about creating engaging incremental games that challenge and entertain players.
+                        Created by <a href="http://qronexstudiosai.work.gd" target="_blank" rel="noopener noreferrer" class="company-link" aria-label="Visitar sitio web de Qronex Studio">Qronex Studio</a>, we're passionate about creating engaging incremental games that challenge and entertain players.
                     </p>
                 </div>
 
-                <div class="features-grid">
-                    <div class="feature-card feature-card-1">
-                        <span class="feature-icon">∞</span>
+                <div class="features-grid" aria-label="Características clave del juego">
+                    <div class="feature-card feature-card-1" role="listitem">
+                        <span class="feature-icon" aria-hidden="true">∞</span>
                         <h3>Infinite Possibilities</h3>
-                        <p>Endless upgrade paths and achievements to unlock</p>
+                        <p>Endless upgrade paths and achievements to unlock.</p>
                     </div>
-                    <div class="feature-card feature-card-2">
-                        <span class="feature-icon">⚡</span>
+                    <div class="feature-card feature-card-2" role="listitem">
+                        <span class="feature-icon" aria-hidden="true">⚡</span>
                         <h3>Fast Progress</h3>
-                        <p>Quick and satisfying progression system</p>
+                        <p>Quick and satisfying progression system.</p>
                     </div>
-                    <div class="feature-card feature-card-3">
-                        <span class="feature-icon">🎮</span>
+                    <div class="feature-card feature-card-3" role="listitem">
+                        <span class="feature-icon" aria-hidden="true">🎮</span>
                         <h3>Dynamic Gameplay</h3>
-                        <p>Engaging mechanics that keep you coming back</p>
+                        <p>Engaging mechanics that keep you coming back.</p>
                     </div>
                 </div>
             </section>
@@ -49,6 +48,18 @@ import Layout from "@/layouts/Layout.astro";
 </Layout>
 
 <style>
+    :root {
+        --color-primary: #8a5be2;
+        --color-secondary: #ff69b4;
+        --color-text-light: #fff;
+        --color-text-medium: #eee;
+        --color-text-dark: #ddd;
+        --color-bg-transparent-light: #ffffff0d;
+        --color-bg-transparent-medium: #ffffff1a;
+        --color-shadow-light: #00000033;
+        --color-shadow-medium: #0000004d;
+    }
+
     @keyframes fadeInUp {
         from {
             opacity: 0;
@@ -60,24 +71,31 @@ import Layout from "@/layouts/Layout.astro";
         }
     }
 
-    .about-container {
+    .about-page-main {
+        max-width: 100%;
+        padding: 2rem;
+    }
+
+    .main-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem;
-        animation: fadeInUp 0.7s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.1s;
         opacity: 0;
+        cursor: default;
     }
 
     .hero-section {
         text-align: center;
         margin-bottom: 4rem;
         padding: 4rem 2rem;
-        background: #0005;
-        border-radius: 1rem;
-        backdrop-filter: blur(10px);
-        border: 1px solid #ffffff17;
-        animation: fadeInUp 0.7s ease forwards;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 1.5rem;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.3s;
         opacity: 0;
     }
@@ -85,41 +103,46 @@ import Layout from "@/layouts/Layout.astro";
     .title {
         font-size: clamp(2.5rem, 5vw, 4rem);
         font-weight: 800;
-        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-bottom: 1rem;
-        animation: fadeInUp 0.7s ease forwards;
+        text-shadow: 0 4px 15px rgba(138, 91, 226, 0.4);
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.5s;
         opacity: 0;
     }
 
     .subtitle {
         font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-        color: inherit;
+        color: var(--color-text-medium);
         opacity: 0.9;
-        animation: fadeInUp 0.7s ease forwards;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.7s;
         opacity: 0;
     }
 
     .content-section {
         display: grid;
-        gap: 2rem;
-        animation: fadeInUp 0.7s ease forwards;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2.5rem;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.9s;
         opacity: 0;
     }
 
     .card {
-        background: #ffffff09;
-        padding: 2rem;
-        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 2.5rem;
+        border-radius: 1.5rem;
         backdrop-filter: blur(10px);
-        border: 1px solid #ffffff17;
-        transition: transform 0.3s ease;
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
         opacity: 0;
-        animation: fadeInUp 0.7s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     }
 
     .about-card-1 {
@@ -131,49 +154,57 @@ import Layout from "@/layouts/Layout.astro";
     }
 
     .card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); 
+        background: rgba(255, 255, 255, 0.15);
     }
 
     .section-title {
-        font-size: 1.5rem;
-        color: #fff;
-        margin-bottom: 1rem;
+        font-size: 1.8rem;
+        color: var(--color-text-light);
+        margin-bottom: 1.2rem;
+        font-weight: 700;
     }
 
     .section-text {
-        color: #cdcdcd;
-        line-height: 1.6;
+        color: var(--color-text-dark);
+        line-height: 1.7;
+        font-size: 1.05rem;
     }
 
     .company-link {
-        color: #8a5be2;
+        color: var(--color-secondary);
         text-decoration: none;
         border-bottom: 2px solid transparent;
-        transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease, color 0.3s ease;
+        font-weight: bold;
     }
 
     .company-link:hover {
-        border-color: #8a5be2;
+        border-color: var(--color-secondary);
+        color: #ff8cc0;
     }
 
     .features-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 2rem;
-        margin-top: 2rem;
-        animation: fadeInUp 0.7s ease forwards;
-        animation-delay: 1.5s;
+        margin-top: 3rem;
         opacity: 0;
+        animation: fadeInUp 0.8s ease forwards;
+        animation-delay: 1.5s;
     }
 
     .feature-card {
-        background: #8a5be21a;
-        padding: 2rem;
-        border-radius: 1rem;
+        background: rgba(138, 91, 226, 0.15);
+        padding: 2.2rem;
+        border-radius: 1.2rem;
         text-align: center;
-        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
         opacity: 0;
-        animation: fadeInUp 0.7s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .feature-card-1 {
@@ -189,28 +220,126 @@ import Layout from "@/layouts/Layout.astro";
     }
 
     .feature-card:hover {
-        transform: translateY(-5px);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        background: rgba(138, 91, 226, 0.25);
     }
 
     .feature-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
         display: inline-block;
+        color: var(--color-secondary);
+        text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
     }
 
     .feature-card h3 {
-        color: #fff;
+        color: var(--color-text-light);
         margin: 1rem 0;
-        font-size: 1.25rem;
+        font-size: 1.4rem;
     }
 
     .feature-card p {
-        color: #cdcdcd;
-        font-size: 1rem;
-        line-height: 1.4;
+        color: var(--color-text-dark);
+        font-size: 1.05rem;
+        line-height: 1.6;
     }
 
-    .about-container {
-        cursor: default;
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 3rem 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .title {
+            font-size: 2.2rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+        }
+        .content-section {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .card {
+            padding: 2rem;
+            border-radius: 1.2rem;
+        }
+        .section-title {
+            font-size: 1.5rem;
+        }
+        .section-text {
+            font-size: 1rem;
+        }
+        .features-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .feature-card {
+            padding: 1.8rem;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+        }
+        .feature-card p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .about-page-main {
+            padding: 1rem;
+        }
+        .hero-section {
+            padding: 2.5rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .title {
+            font-size: 1.8rem;
+        }
+        .subtitle {
+            font-size: 1rem;
+        }
+        .card {
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+        .section-title {
+            font-size: 1.3rem;
+        }
+        .section-text {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        .feature-card {
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin: 0.8rem 0;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .card:hover, .feature-card:hover {
+            transform: none;
+            box-shadow: initial;
+            background: initial;
+        }
     }
 </style>

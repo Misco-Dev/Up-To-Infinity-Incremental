@@ -4,43 +4,56 @@ import Countdown from "@/components/countdown.astro"
 ---
 
 <Layout title="Up To Infinity Incremental">
-    <main role="main">
-        <div class="hero-section">
-            <div class="container" role="textbox" aria-label="Introducing content">
-                <h1 class="title" role="heading">Up To Infinity Incremental</h1>
+    <main role="main" class="main-content">
+        <section class="hero-section" aria-labelledby="game-title">
+            <div class="container" role="textbox" aria-label="Introducción al juego Up To Infinity Incremental">
+                <h1 id="game-title" class="title" role="heading" aria-level="1">Up To Infinity Incremental</h1>
                 <p class="introduction" role="complementary">Welcome to the Future of Incremental Games</p>
                 <p class="introduction-content" role="contentinfo">How this game works?</p>
                 <p role="definition" class="introduction-content-description">
-                    This game works by getting infinities, which you can later use for better upgrades to get better at the game
+                    This game works by getting infinities, which you can later use for better upgrades to get better at the game.
                 </p>
-                <div class="features">
-                    <div class="feature-item">
-                        <span class="feature-icon">∞</span>
+
+                <div class="features" role="list">
+                    <div class="feature-item" role="listitem">
+                        <span class="feature-icon" aria-hidden="true">∞</span>
                         <h4>Infinite Possibilities</h4>
-                        <p>Unlock endless upgrades and achievements</p>
+                        <p>Unlock endless upgrades and achievements.</p>
                     </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">⚡</span>
+                    <div class="feature-item" role="listitem">
+                        <span class="feature-icon" aria-hidden="true">⚡</span>
                         <h4>Fast Progress</h4>
-                        <p>Quick and satisfying progression system</p>
+                        <p>Quick and satisfying progression system.</p>
                     </div>
-                    <div class="feature-item">
-                        <span class="feature-icon">🎮</span>
+                    <div class="feature-item" role="listitem">
+                        <span class="feature-icon" aria-hidden="true">🎮</span>
                         <h4>Dynamic Gameplay</h4>
-                        <p>Engaging mechanics that keep you coming back</p>
+                        <p>Engaging mechanics that keep you coming back.</p>
                     </div>
                 </div>
             </div>
-        </div>
-        
-        <div class="countdown-section">
-            <h3 class="countdown-text">The game will be released in</h3>
+        </section>
+
+        <section class="countdown-section" aria-labelledby="release-countdown">
+            <h3 id="release-countdown" class="countdown-text">The game will be released in:</h3>
             <Countdown />
-        </div>
+        </section>
     </main>
 </Layout>
 
 <style>
+    :root {
+        --color-primary: #8a5be2;
+        --color-secondary: #ff69b4;
+        --color-text-light: #fff;
+        --color-text-medium: #eee;
+        --color-text-dark: #ddd;
+        --color-bg-transparent-light: #ffffff0d;
+        --color-bg-transparent-medium: #ffffff1a;
+        --color-shadow-light: #0000004d;
+        --color-shadow-medium: #00000066;
+    }
+
     @keyframes fadeInUp {
         0% {
             opacity: 0;
@@ -50,6 +63,10 @@ import Countdown from "@/components/countdown.astro"
             opacity: 1;
             transform: translateY(0);
         }
+    }
+
+    .main-content {
+        overflow-x: hidden;
     }
 
     .hero-section {
@@ -68,187 +85,202 @@ import Countdown from "@/components/countdown.astro"
         margin: 0 auto;
         padding: 3rem;
         text-align: center;
-        background: #ffffff0d;
+        background: var(--color-bg-transparent-light);
         border-radius: 24px;
-        box-shadow: 0 8px 32px #0000004d;
+        box-shadow: 0 8px 32px var(--color-shadow-light);
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(10px);
-        border: 1px solid #ffffff1a;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid var(--color-bg-transparent-medium);
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
         animation: fadeInUp 1s ease forwards;
         animation-delay: 0.4s;
         opacity: 0;
     }
 
     .container:hover {
-        transform: translateY(-5px);
-		backdrop-filter: blur(0);
-        box-shadow: 0 12px 48px #00000066;
+        transform: translateY(-8px);
+        background: var(--color-bg-transparent-medium);
+        box-shadow: 0 16px 64px var(--color-shadow-medium);
+        backdrop-filter: blur(12px);
     }
 
     .title {
-        font-size: clamp(2.5rem, 5vw, 4rem);
-        font-weight: 800;
-        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        margin-bottom: 1.5rem;
-        text-shadow: none;
+        margin-bottom: 1.8rem;
+        text-shadow: 0 4px 15px rgba(138, 91, 226, 0.4);
         animation: fadeInUp 1s ease forwards;
         animation-delay: 0.6s;
         opacity: 0;
     }
 
     .introduction {
-        font-size: clamp(1.5rem, 3vw, 2.5rem);
-        color: #fff;
+        font-size: clamp(1.6rem, 3.5vw, 2.8rem);
+        color: var(--color-text-light);
         font-weight: bold;
         text-transform: uppercase;
-        margin: 1.5rem 0;
-        letter-spacing: 0.1em;
+        margin: 1.8rem 0;
+        letter-spacing: 0.12em;
         animation: fadeInUp 1s ease forwards;
         animation-delay: 0.8s;
         opacity: 0;
     }
 
     .introduction-content {
-        font-size: clamp(1.25rem, 2.5vw, 2rem);
-        color: #eee;
-        margin: 1rem 0;
+        font-size: clamp(1.35rem, 2.8vw, 2.2rem);
+        color: var(--color-text-medium);
+        margin: 1.2rem 0;
     }
 
     .introduction-content-description {
-        font-size: clamp(1rem, 2vw, 1.25rem);
-        color: #ddd;
-        margin: 1rem auto;
-        max-width: 800px;
-        line-height: 1.6;
+        font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+        color: var(--color-text-dark);
+        margin: 1.2rem auto 2rem;
+        max-width: 850px;
+        line-height: 1.7;
     }
 
     .features {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-top: 3rem;
-        padding: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3.5rem;
         animation: fadeInUp 1s ease forwards;
         animation-delay: 1s;
         opacity: 0;
     }
 
     .feature-item {
-        padding: 1.5rem;
-        background: #8a5be21a;
-        border-radius: 16px;
-        transition: transform 0.3s ease;
+        padding: 2rem;
+        background: var(--color-primary-transparent);
+        background: linear-gradient(145deg, #8a5be21a, #ff69b41a);
+        border-radius: 18px; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.08);
     }
 
     .feature-item:hover {
-        transform: translateY(-5px);
+        transform: translateY(-7px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
 
     .feature-icon {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: 3rem; 
+        margin-bottom: 1.2rem;
         display: inline-block;
+        color: var(--color-secondary);
+        text-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
     }
 
     .feature-item h4 {
-        font-size: 1.25rem;
-        color: #fff;
-        margin: 0.5rem 0;
+        font-size: 1.35rem;
+        color: var(--color-text-light);
+        margin: 0.6rem 0;
     }
 
     .feature-item p {
-        color: #ddd;
-        font-size: 1rem;
-        line-height: 1.4;
+        color: var(--color-text-dark);
+        font-size: 1.05rem;
+        line-height: 1.5;
     }
 
     .countdown-section {
         text-align: center;
-        padding: 3rem 1rem;
+        padding: 4rem 1rem;
+        background: #00000020;
+        margin-top: 4rem;
+        border-radius: 12px;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
     .countdown-text {
-        font-size: clamp(1.5rem, 3vw, 2rem);
-        color: #fff;
-        margin-bottom: 2rem;
+        font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+        color: var(--color-text-light);
+        margin-bottom: 2.5rem;
         text-transform: uppercase;
-        letter-spacing: 0.1em;
-        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        letter-spacing: 0.15em;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-shadow: 0 2px 10px rgba(138, 91, 226, 0.3);
         animation: fadeInUp 1s ease forwards;
         animation-delay: 1.2s;
         opacity: 0;
     }
 
+    body{
+        cursor:default;
+    }
+
     @media (max-width: 768px) {
         .hero-section {
-            padding: 1.25rem;
+            padding: 1.5rem;
             min-height: auto;
         }
 
         .container {
-            padding: 2rem 1.25rem;
-            margin: 1.25rem;
-            border-radius: 18px;
+            padding: 2.5rem 1.5rem;
+            margin: 1.5rem;
+            border-radius: 20px;
         }
 
         .title {
             font-size: 2.75rem;
-            margin-bottom: 1.25rem;
+            margin-bottom: 1.5rem;
         }
 
         .introduction {
             font-size: 1.75rem;
-            margin: 1.25rem 0;
+            margin: 1.5rem 0;
         }
 
         .introduction-content {
-            font-size: 1.35rem;
+            font-size: 1.45rem;
         }
 
         .introduction-content-description {
-            font-size: 1.1rem;
-            margin: 1rem auto;
-            padding: 0 0.75rem;
+            font-size: 1.15rem;
+            margin: 1.2rem auto 1.5rem;
+            padding: 0 0.5rem;
         }
 
         .features {
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
+            grid-template-columns: 1fr; 
+            gap: 2rem;
+            margin-top: 3rem;
             padding: 0.75rem;
         }
 
         .feature-item {
-            padding: 1.5rem;
-            border-radius: 14px;
+            padding: 1.8rem;
+            border-radius: 16px;
         }
 
         .feature-icon {
-            font-size: 2.25rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
         }
 
         .feature-item h4 {
-            font-size: 1.25rem;
-            margin: 0.5rem 0;
+            font-size: 1.3rem;
         }
 
         .feature-item p {
-            font-size: 1rem;
+            font-size: 1.05rem;
         }
 
         .countdown-section {
-            padding: 2.5rem 1.25rem;
+            padding: 3rem 1.5rem;
+            margin-top: 3rem;
         }
 
         .countdown-text {
-            font-size: 1.75rem;
-            margin-bottom: 1.75rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
         }
     }
 
@@ -258,9 +290,9 @@ import Countdown from "@/components/countdown.astro"
         }
 
         .container {
-            padding: 1.5rem 1rem;
-            margin: 0.75rem;
-            border-radius: 14px;
+            padding: 2rem 1rem;
+            margin: 0.5rem;
+            border-radius: 18px;
         }
 
         .title {
@@ -277,52 +309,58 @@ import Countdown from "@/components/countdown.astro"
         }
 
         .introduction-content-description {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
             padding: 0 0.5rem;
+            margin: 1rem auto 1.2rem;
         }
 
         .features {
-            gap: 1.25rem;
-            margin-top: 1.75rem;
+            gap: 1.5rem;
+            margin-top: 2rem;
             padding: 0.5rem;
         }
 
         .feature-item {
-            padding: 1.25rem;
-            border-radius: 12px;
+            padding: 1.5rem;
+            border-radius: 14px;
         }
 
         .feature-icon {
-            font-size: 2rem;
-            margin-bottom: 0.75rem;
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .feature-item h4 {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
         }
 
         .feature-item p {
-            font-size: 1rem;
+            font-size: 0.95rem;
             line-height: 1.5;
         }
 
         .countdown-section {
-            padding: 2rem 1rem;
+            padding: 2.5rem 1rem;
+            margin-top: 2.5rem;
         }
 
         .countdown-text {
-            font-size: 1.5rem;
-            margin-bottom: 1.25rem;
+            font-size: 1.7rem;
+            margin-bottom: 1.5rem;
         }
 
+        
         .container:hover {
             transform: none;
-            box-shadow: 0 8px 32px #0000004d;
+            box-shadow: 0 8px 32px var(--color-shadow-light);
+            background: var(--color-bg-transparent-light);
+            backdrop-filter: blur(10px);
         }
 
         .feature-item:hover {
             transform: none;
+            box-shadow: none;
         }
     }
 </style>

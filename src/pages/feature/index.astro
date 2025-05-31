@@ -2,9 +2,9 @@
 import Layout from "@/layouts/Layout.astro";
 
 interface Feature {
-	title: string;
-	description: string;
-	icon: string;
+    title: string;
+    description: string;
+    icon: string;
 }
 
 const features: Feature[] = [
@@ -31,129 +31,217 @@ const features: Feature[] = [
 ];
 ---
 
-<Layout title="Game Features | Up To Infinity Incremental">
-	<main role="main">
-		<div class="about-container">
-			<section class="hero-section">
-				<h1 class="title">Game Features</h1>
-				<p class="subtitle">Discover what makes our game unique</p>
-			</section>
+<Layout title="Características del Juego | Up To Infinity Incremental">
+    <main role="main" class="features-page-main">
+        <div class="main-container">
+            <section class="hero-section" aria-labelledby="features-title">
+                <h1 id="features-title" class="title" role="heading" aria-level="1">Game Features</h1>
+                <p class="subtitle">Discover what makes our game unique.</p>
+            </section>
 
-			<section class="features-grid">
-				{features.map((feature, index) => (
-				<article class={`feature-card feature-card-${index + 1}`} style={`animation-delay: ${1.7 + index * 0.2}s`}>
-					<div class="feature-icon" aria-hidden="true">{feature.icon}</div>
-					<h3>{feature.title}</h3>
-					<p>{feature.description}</p>
-				</article>
-				))}
-			</section>
-		</div>
-	</main>
+            <section class="features-grid" aria-label="Lista de características del juego">
+                {features.map((feature, index) => (
+                    <article class="feature-card" role="listitem" style={`animation-delay: ${0.5 + index * 0.2}s;`}>
+                        <div class="feature-icon" aria-hidden="true">{feature.icon}</div>
+                        <h3 role="heading" aria-level="3">{feature.title}</h3>
+                        <p>{feature.description}</p>
+                    </article>
+                ))}
+            </section>
+        </div>
+    </main>
 </Layout>
 
 <style>
-	@keyframes fadeInUp {
-		from {
-		opacity: 0;
-		transform: translateY(20px);
-		}
-		to {
-		opacity: 1;
-		transform: translateY(0);
-		}
-	}
+    :root {
+        --color-primary: #8a5be2;
+        --color-secondary: #ff69b4;
+        --color-text-light: #fff;
+        --color-text-medium: #eee;
+        --color-text-dark: #ddd;
+        --color-bg-transparent-light: #ffffff0d; 
+        --color-bg-transparent-medium: #ffffff1a;
+        --color-shadow-light: #00000033;
+        --color-shadow-medium: #0000004d;
+    }
 
-	.about-container {
-		max-width: 1200px;
-		margin: 0 auto;
-		padding: 2rem;
-		animation: fadeInUp 0.7s ease forwards;
-		animation-delay: 0.1s;
-		opacity: 0;
-		cursor: default;
-	}
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
-	.hero-section {
-		text-align: center;
-		margin-bottom: 4rem;
-		padding: 4rem 2rem;
-		background: #0005;
-		border-radius: 1rem;
-		backdrop-filter: blur(10px);
-		border: 1px solid #ffffff17;
-		animation: fadeInUp 0.7s ease forwards;
-		animation-delay: 0.3s;
-		opacity: 0;
-	}
+    .features-page-main {
+        max-width: 100%;
+        padding: 2rem;
+    }
 
-	.title {
-		font-size: clamp(2.5rem, 5vw, 4rem);
-		font-weight: 800;
-		background: linear-gradient(135deg, #8a5be2, #ff69b4);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		margin-bottom: 1rem;
-		animation: fadeInUp 0.7s ease forwards;
-		animation-delay: 0.5s;
-		opacity: 0;
-	}
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        animation: fadeInUp 0.7s ease forwards;
+        animation-delay: 0.1s;
+        opacity: 0;
+        cursor: default;
+    }
 
-	.subtitle {
-		font-size: clamp(1.25rem, 2.5vw, 1.5rem);
-		color: inherit;
-		opacity: 0.9;
-		animation: fadeInUp 0.7s ease forwards;
-		animation-delay: 0.7s;
-		opacity: 0;
-	}
+    .hero-section {
+        text-align: center;
+        margin-bottom: 4rem;
+        padding: 4rem 2rem;
+        background: rgba(0, 0, 0, 0.4);
+        border-radius: 1rem;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        animation: fadeInUp 0.7s ease forwards;
+        animation-delay: 0.3s;
+        opacity: 0;
+    }
 
-	.features-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-		gap: 2rem;
-		margin-top: 2rem;
-		animation: fadeInUp 0.7s ease forwards;
-		opacity: 0;
-		animation-delay: 1.5s;
-	}
+    .title {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 800;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+        text-shadow: 0 4px 15px rgba(138, 91, 226, 0.4);
+        animation: fadeInUp 0.7s ease forwards;
+        animation-delay: 0.5s;
+        opacity: 0;
+    }
 
-	.feature-card {
-		background: #8a5be21a;
-		padding: 2rem;
-		border-radius: 1rem;
-		text-align: center;
-		transition: transform 0.3s ease;
-		opacity: 0;
-		animation: fadeInUp 0.5s ease forwards;
-		user-select: none;
-		cursor: default;
-	}
+    .subtitle {
+        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        color: var(--color-text-medium);
+        opacity: 0.9;
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+        animation: fadeInUp 0.7s ease forwards;
+        animation-delay: 0.7s;
+        opacity: 0;
+    }
 
-	.feature-card-1 { animation-delay: 1s; }
-	.feature-card-2 { animation-delay: 1.25s; }
-	.feature-card-3 { animation-delay: 1.5s; }
-	.feature-card-4 { animation-delay: 1.75s; }
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+        gap: 2.5rem;
+        margin-top: 2rem;
+    }
 
-	.feature-card:hover {
-		transform: translateY(-5px);
-	}
+    .feature-card {
+        background: rgba(138, 91, 226, 0.12);
+        padding: 2.2rem;
+        border-radius: 1.2rem;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        opacity: 0;
+        animation: fadeInUp 0.6s ease forwards;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
 
-	.feature-icon {
-		font-size: 2.5rem;
-		margin-bottom: 1rem;
-		display: inline-block;
-	}
+    .feature-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        background: rgba(138, 91, 226, 0.2);
+    }
 
-	.feature-card h3 {
-		color: #fff;
-		margin: 1rem 0;
-		font-size: 1.25rem;
-	}
+    .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+        display: inline-block;
+        color: var(--color-secondary);
+        text-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+    }
 
-	.feature-card p {
-		color: #cdcdcd;
-		font-size: 1rem;
-		line-height: 1.4;
-	}
+    .feature-card h3 {
+        color: var(--color-text-light);
+        margin: 1rem 0;
+        font-size: 1.4rem;
+        font-weight: 700;
+    }
+
+    .feature-card p {
+        color: var(--color-text-dark);
+        font-size: 1.05rem;
+        line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+        .hero-section {
+            padding: 3rem 1.5rem;
+            margin-bottom: 3rem;
+        }
+        .title {
+            font-size: 2.2rem;
+        }
+        .subtitle {
+            font-size: 1.1rem;
+        }
+        .features-grid {
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        .feature-card {
+            padding: 1.8rem;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+        }
+        .feature-card h3 {
+            font-size: 1.25rem;
+        }
+        .feature-card p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .features-page-main {
+            padding: 1rem;
+        }
+        .hero-section {
+            padding: 2.5rem 1rem;
+            margin-bottom: 2rem;
+        }
+        .title {
+            font-size: 1.8rem;
+        }
+        .subtitle {
+            font-size: 1rem;
+        }
+        .features-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        .feature-card {
+            padding: 1.5rem;
+            border-radius: 1rem;
+        }
+        .feature-icon {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+        .feature-card h3 {
+            font-size: 1.1rem;
+            margin: 0.8rem 0;
+        }
+        .feature-card p {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .feature-card:hover {
+            transform: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background: rgba(138, 91, 226, 0.12);
+        }
+    }
 </style>

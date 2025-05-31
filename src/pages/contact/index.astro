@@ -1,44 +1,67 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import Discord from "@/assets/svg/discord.svg"
-import X from "@/assets/svg/twitter.svg"
+import Discord from "@/assets/svg/discord.svg";
+import X from "@/assets/svg/twitter.svg";
 ---
 
-<Layout title="Contact Us | Up To Infinity Incremental">
-    <main role="main">
+<Layout title="Contáctanos | Up To Infinity Incremental">
+    <main role="main" class="contact-page-main">
         <div class="contact-container">
-        <div class="contact-card">
-            <h1 class="title">Contact us</h1>
-            <p class="subtitle">Join our community and stay updated</p>
+            <div class="contact-card">
+                <h1 class="title" role="heading" aria-level="1">Contact us</h1>
+                <p class="subtitle">Join our community and stay updated.</p>
 
-            <div class="social-links">
-            <a href="https://discord.gg/RnQP9BQjge" target="_blank" class="social-link discord">
-                <Discord class="social-icon"/>
-                <span class="social-name">Discord</span>
-                <span class="social-description">Join our community</span>
-            </a>
+                <div class="social-links" role="group" aria-label="Enlaces a redes sociales">
+                    <a href="https://discord.gg/RnQP9BQjge" target="_blank" rel="noopener noreferrer" class="social-link discord" aria-label="Únete a nuestro Discord">
+                        <Discord class="social-icon" aria-hidden="true"/>
+                        <span class="social-name">Discord</span>
+                        <span class="social-description">Join our community</span>
+                    </a>
 
-            <a href="https://x.com/QronexStudio" target="_blank" class="social-link twitter">
-                <X class="social-icon"/>
-                <span class="social-name">Twitter</span>
-                <span class="social-description">Follow for updates</span>
-            </a>
+                    <a href="https://x.com/QronexStudio" target="_blank" rel="noopener noreferrer" class="social-link twitter" aria-label="Síguenos en X (Twitter)">
+                        <X class="social-icon" aria-hidden="true"/>
+                        <span class="social-name">X (Twitter)</span>
+                        <span class="social-description">Follow for update</span>
+                    </a>
+                </div>
+
+                <div class="contact-info" role="region" aria-labelledby="contact-info-heading">
+                    <h2 id="contact-info-heading" role="heading" aria-level="2">Contact Information</h2>
+                    <p>For business inquiries or support:</p>
+                    <a href="mailto:qronexstudios@gmail.com" class="email-link">
+                        qronexstudios@gmail.com
+                    </a>
+                </div>
             </div>
-
-            <div class="contact-info">
-            <h2>Contact Information</h2>
-            <p>For business inquiries or support:</p>
-            <a href="mailto:qronexstudios@gmail.com" class="email-link">
-                qronexstudios@gmail.com
-            </a>
-            </div>
-        </div>
         </div>
     </main>
 </Layout>
 
 <style>
-    html, body {
+    :root {
+        --color-primary: #8a5be2;
+        --color-secondary: #ff69b4;
+        --color-text-light: #fff;
+        --color-text-medium: #eee;
+        --color-text-dark: #ddd;
+        --color-bg-transparent-light: #ffffff0d; 
+        --color-bg-transparent-medium: #ffffff1a;
+        --color-shadow-light: #0000004d;
+        --color-shadow-medium: #00000066;
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .contact-page-main {
         overflow-x: hidden;
     }
 
@@ -50,56 +73,59 @@ import X from "@/assets/svg/twitter.svg"
         cursor: default;
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.6s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.1s;
     }
 
     .contact-card {
         width: 100%;
         max-width: 800px;
-        padding: 3rem;
-        background: #00000080;
-        border-radius: 24px;
-        backdrop-filter: blur(10px);
-        border: 1px solid #ffffff1a;
-        box-shadow: 0 8px 32px #0000004d;
+        padding: 3.5rem;
+        background: rgba(0, 0, 0, 0.6);
+        border-radius: 28px;
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
         text-align: center;
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.5s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.3s;
     }
 
     .title {
-        font-size: clamp(2rem, 5vw, 3rem);
-        margin-bottom: 0.5rem;
-        background: linear-gradient(135deg, #8a5be2, #ff69b4);
+        font-size: clamp(2.2rem, 5vw, 3.5rem);
+        margin-bottom: 0.8rem;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        text-shadow: 0 3px 12px rgba(138, 91, 226, 0.4);
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.5s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.5s;
     }
 
     .subtitle {
-        font-size: 1.2rem;
-        color: #cdcdcd;
-        margin-bottom: 3rem;
+        font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+        color: var(--color-text-medium);
+        margin-bottom: 3.5rem;
+        text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.5s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.7s;
     }
 
     .social-links {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-        margin-bottom: 3rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-bottom: 4rem;
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.5s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 0.9s;
     }
 
@@ -107,14 +133,16 @@ import X from "@/assets/svg/twitter.svg"
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2rem;
-        background: #ffffff0d;
-        border-radius: 16px;
+        padding: 2.5rem;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 20px;
         text-decoration: none;
-        transition: transform 0.3s ease, background-color 0.3s ease;
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.5s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     }
 
     .social-link.discord {
@@ -126,127 +154,197 @@ import X from "@/assets/svg/twitter.svg"
     }
 
     .social-link:hover {
-        transform: translateY(-5px);
-        background: #ffffff1a;
+        transform: translateY(-8px);
+        background: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
     }
 
     .social-icon {
-        height: 40px;
-        width: 40px;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        height: 50px;
+        width: 50px;
+        margin-bottom: 1.5rem;
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
     }
 
     .social-name {
-        font-size: 1.25rem;
-        color: #fff;
-        margin-bottom: 0.5rem;
+        font-size: 1.4rem;
+        color: var(--color-text-light);
+        margin-bottom: 0.8rem;
         font-weight: bold;
     }
 
     .social-description {
-        color: #cdcdcd;
-        font-size: 0.9rem;
+        color: var(--color-text-dark);
+        font-size: 1rem;
     }
 
     .contact-info {
-        margin-top: 3rem;
-        padding-top: 2rem;
-        border-top: 1px solid #ffffff15;
+        margin-top: 4rem;
+        padding-top: 2.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
         opacity: 0;
         transform: translateY(20px);
-        animation: fadeInUp 0.5s ease forwards;
+        animation: fadeInUp 0.8s ease forwards;
         animation-delay: 1.5s;
     }
 
     .contact-info h2 {
-        font-size: 1.5rem;
-        color: #fff;
-        margin-bottom: 1rem;
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        color: var(--color-text-light);
+        margin-bottom: 1.2rem;
     }
 
     .contact-info p {
-        color: #cdcdcd;
-        margin-bottom: 1rem;
+        color: var(--color-text-medium);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
     }
 
     .email-link {
-        color: #8a5be2;
+        color: var(--color-secondary);
         text-decoration: none;
         border-bottom: 2px solid transparent;
-        transition: border-color 0.3s ease;
+        transition: border-color 0.3s ease, color 0.3s ease;
         font-weight: bold;
+        font-size: 1.25rem;
+        text-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
     }
 
     .email-link:hover {
-        border-color: #8a5be2;
+        border-color: var(--color-secondary);
+        color: #ff8cc0;
     }
 
-    .social-link:hover {
-        transform: translateY(-5px);
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 768px) {
         .contact-container {
-        padding: 1rem;
-        min-height: auto;
+            padding: 1.5rem;
         }
 
         .contact-card {
-        padding: 2rem 1.5rem;
-        border-radius: 1rem;
+            padding: 3rem 2rem;
+            border-radius: 24px;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            margin-bottom: 0.7rem;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
         }
 
         .social-links {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-bottom: 2rem;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 3.5rem;
         }
 
         .social-link {
-        padding: 1.5rem;
+            padding: 2rem;
+            border-radius: 18px;
         }
 
         .social-icon {
-        font-size: 2rem;
-        margin-bottom: 0.75rem;
+            height: 45px;
+            width: 45px;
+            margin-bottom: 1.2rem;
         }
 
         .social-name {
-        font-size: 1.1rem;
+            font-size: 1.25rem;
         }
 
         .social-description {
-        font-size: 0.85rem;
+            font-size: 0.95rem;
         }
 
         .contact-info {
-        margin-top: 2rem;
-        padding-top: 1.5rem;
+            margin-top: 3.5rem;
+            padding-top: 2rem;
         }
 
         .contact-info h2 {
-        font-size: 1.3rem;
+            font-size: 1.7rem;
         }
 
         .contact-info p {
-        font-size: 0.9rem;
-        margin-bottom: 0.75rem;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
         }
 
         .email-link {
-        font-size: 1rem;
+            font-size: 1.1rem;
         }
     }
 
-    @keyframes fadeInUp {
-        from {
-        opacity: 0;
-        transform: translateY(20px);
+    @media (max-width: 480px) {
+        .contact-container {
+            padding: 1rem;
         }
-        to {
-        opacity: 1;
-        transform: translateY(0);
+
+        .contact-card {
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+        }
+
+        .title {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-links {
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .social-link {
+            padding: 1.8rem;
+            border-radius: 16px;
+        }
+
+        .social-icon {
+            height: 40px;
+            width: 40px;
+            margin-bottom: 1rem;
+        }
+
+        .social-name {
+            font-size: 1.15rem;
+        }
+
+        .social-description {
+            font-size: 0.85rem;
+        }
+
+        .contact-info {
+            margin-top: 3rem;
+            padding-top: 1.8rem;
+        }
+
+        .contact-info h2 {
+            font-size: 1.5rem;
+        }
+
+        .contact-info p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .email-link {
+            font-size: 1rem;
+        }
+
+        .social-link:hover {
+            transform: none;
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
     }
 </style>
