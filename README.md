@@ -1,36 +1,42 @@
 # UP TO INFINITY INCREMENTAL
 
-![Up To Infinity Incremental](/public/image/background.webp)
+![Up To Infinity Incremental](https://uptoinfinityincremental.work.gd/image/background.webp)
 
+---
 
-## 🎮 Description
-An engaging incremental game built with modern web technologies where players progress through infinite levels of achievements and upgrades.
+## 🚀 Project Overview
 
-## 🚀 Technologies
-- Astro
-- TypeScript
-- CSS
-- JavaScript
+**Up To Infinity Incremental** is an engaging incremental game crafted with modern web technologies. Players embark on an infinite journey of progression, unlocking dynamic upgrades and achievements as they delve deeper into a universe of endless possibilities. This project serves as both a game and a comprehensive guide to understanding its core mechanics.
+
+---
 
 ## ✨ Features
-- Infinite progression system
-- Dynamic upgrades and achievements
-- Modern and responsive UI
-- Cross-platform compatibility
-- Real-time saving system
 
-## 🛠️ Installation
+* **Infinite Progression System:** Experience limitless growth and new challenges.
+* **Dynamic Upgrades & Achievements:** Constantly evolve your gameplay with new unlocks.
+* **Modern & Responsive UI:** Enjoy a sleek, intuitive, and adaptive user interface across all devices.
+* **Cross-Platform Compatibility:** Play seamlessly on various platforms.
+* **Real-time Saving System:** Your progress is always safe and automatically saved.
+
+---
+
+## ➡️ Getting Started
+
+Follow these simple steps to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Installation
+
 ```bash
-# Clone the repository
-git clone https://github.com/misco-j/Up-To-Infinity-Incremental.git
+# 1. Clone the repository
+git clone [https://github.com/misco-j/Up-To-Infinity-Incremental.git](https://github.com/misco-j/Up-To-Infinity-Incremental.git)
 
-# Navigate to project directory
-cd uptoinfinityincremental
+# 2. Navigate to the project directory
+cd Up-To-Infinity-Incremental
 
-# Install dependencies
+# 3. Install dependencies using pnpm (ensure pnpm is installed globally)
 pnpm install
 
-# Start development server
+# 4.Start development server
 pnpm run dev
 ```
 
@@ -43,6 +49,7 @@ pnpm run build
 pnpm run preview
 ```
 
+
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -53,5 +60,5 @@ This project is licensed under the Apache License 2.0- see the [LICENSE](LICENSE
 - [Discord Server](https://discord.gg/RnQP9BQjge)
 - [Twitter](https://x.com/QronexStudio)
 
-![Logo](/public/image/icon.png)
+![Logo](https://uptoinfinityincremental.work.gd/image/icon.png)
 
