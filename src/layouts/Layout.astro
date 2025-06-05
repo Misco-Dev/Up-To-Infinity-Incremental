@@ -5,6 +5,7 @@ import Footer from "@/components/footer.astro";
 import Analytics from '@vercel/analytics/astro'
 import SpeedInsights  from "@vercel/speed-insights/astro"
 import Error404 from "@/components/error404.astro"
+import '@/styles/global.css';
 ---
 
 <!doctype html>
@@ -125,50 +126,6 @@ import Error404 from "@/components/error404.astro"
                 color: var(--color-secondary);
                 text-decoration: underline;
             }
-
-            @media screen and (max-width: 768px) {
-                body {
-                    width: 10vw;;
-                }
-                
-            }
-
-            @media screen and (max-width: 480px) {
-                body {
-                    width: 100vw;
-                }
-                
-            }
-
-			@font-face {
-				font-family: 'fredoka';
-				src: url('../assets/fonts/Fredoka-Light.woff2') format('woff2');
-				font-weight: 200;
-			}
-
-			@font-face {
-				font-family: 'fredoka';
-				src: url('../assets/fonts/Fredoka-Regular.woof2') format('woff2');
-				font-weight: 400;
-			}
-
-			@font-face {
-				font-family: 'fredoka';
-				src: url('../assets/fonts/Fredoka-Medium.woff2') format('woff2');
-				font-weight: 600;
-			}
-
-			@font-face {
-				font-family: 'fredoka';
-				src: url('../assets/fonts/Fredoka-SemiBold.woff2') format('woff2');
-				font-weight: 800;
-			}
-
-			@font-face {
-				font-family: 'fredoka';
-				src: url('../assets/fonts/Fredoka-Bold.woff2') format('woff2');
-				font-weight: 900;
-			}
         </style>
     </head>
     <body>
