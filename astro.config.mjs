@@ -8,4 +8,5 @@ export default defineConfig({
 			enabled: true,
 		},
   	}),
+	defaultLocale: "en",
 });
