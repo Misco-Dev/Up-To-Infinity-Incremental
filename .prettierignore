@@ -1,0 +1,15 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+.verccel/
+
+# Astro generated files
+.astro/
+
+# Lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
