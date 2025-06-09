@@ -40,16 +40,6 @@ pnpm install
 pnpm run dev
 ```
 
-## 🔧 Development
-```bash
-# Build for production
-pnpm run build
-
-# Preview production build
-pnpm run preview
-```
-
-
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
