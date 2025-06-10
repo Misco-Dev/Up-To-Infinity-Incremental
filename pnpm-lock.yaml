@@ -8,6 +8,9 @@ dependencies:
   '@astrojs/vercel':
     specifier: ^8.1.5
     version: 8.1.5(astro@5.9.0)
+  '@fontsource-variable/fredoka':
+    specifier: ^5.2.8
+    version: 5.2.8
   '@vercel/analytics':
     specifier: ^1.5.0
     version: 1.5.0
@@ -479,6 +482,14 @@ packages:
       '@eslint/core': 0.14.0
       levn: 0.4.1
     dev: true
+
+  /@fontsource-variable/fredoka@5.2.8:
+    resolution: {integrity: sha512-oIkGpZS+s0eZhoBzALKENP15KDu9031UNIAp2ZNkKzLDg2f6s7Q4lW4atPx9KxLloQCUZMNGkoitXXGyIhRa2Q==}
+    dev: false
+
+  /@fontsource/fredoka@5.2.8:
+    resolution: {integrity: sha512-l3wJLKWlOeSvLCcTztPFmKQK/MV7dreg24ls8I7hdJQLhU8BNLDIVyqMYdmMhvblfyL0/QPLNjHP7MTGQFK2ug==}
+    dev: false
 
   /@humanfs/core@0.19.1:
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
