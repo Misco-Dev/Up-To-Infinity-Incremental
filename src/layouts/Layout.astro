@@ -1,7 +1,7 @@
 ---
 const { title } = Astro.props;
-import { ClientRouter } from "astro:transitions";
 import "@fontsource-variable/fredoka";
+import { ClientRouter } from 'astro:transitions';
 import Header from "@/components/header.astro";
 import Footer from "@/components/footer.astro";
 import Error404 from "@/components/error404.astro"
@@ -39,8 +39,6 @@ import SpeedInsights  from "@vercel/speed-insights/astro"
         <link rel="apple-touch-icon" href="/image/icon.png">
         <meta name="generator" content={Astro.generator} />
         <title>{ title }</title>
-        <SpeedInsights></SpeedInsights>
-        <Analytics></Analytics>
         <style is:global>
             :root {
                 --color-primary: #8a5be2;
@@ -132,7 +130,9 @@ import SpeedInsights  from "@vercel/speed-insights/astro"
             }
         </style>
     </head>
-    <body>
+    <body >
+        <Analytics />
+        <SpeedInsights />
         <Header></Header>
         <slot>
             <Error404></Error404>
