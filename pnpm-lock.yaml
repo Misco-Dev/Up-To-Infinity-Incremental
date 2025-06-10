@@ -487,10 +487,6 @@ packages:
     resolution: {integrity: sha512-oIkGpZS+s0eZhoBzALKENP15KDu9031UNIAp2ZNkKzLDg2f6s7Q4lW4atPx9KxLloQCUZMNGkoitXXGyIhRa2Q==}
     dev: false
 
-  /@fontsource/fredoka@5.2.8:
-    resolution: {integrity: sha512-l3wJLKWlOeSvLCcTztPFmKQK/MV7dreg24ls8I7hdJQLhU8BNLDIVyqMYdmMhvblfyL0/QPLNjHP7MTGQFK2ug==}
-    dev: false
-
   /@humanfs/core@0.19.1:
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
     engines: {node: '>=18.18.0'}
