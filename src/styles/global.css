@@ -11,33 +11,3 @@
     }
     
 }
-
-@font-face {
-    font-family: 'fredoka';
-    src: url('../assets/fonts/Fredoka-Light.woff2') format('woff2');
-    font-weight: 200;
-}
-
-@font-face {
-    font-family: 'fredoka';
-    src: url('../assets/fonts/Fredoka-Regular.woof2') format('woff2');
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: 'fredoka';
-    src: url('../assets/fonts/Fredoka-Medium.woff2') format('woff2');
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: 'fredoka';
-    src: url('../assets/fonts/Fredoka-SemiBold.woff2') format('woff2');
-    font-weight: 800;
-}
-
-@font-face {
-    font-family: 'fredoka';
-    src: url('../assets/fonts/Fredoka-Bold.woff2') format('woff2');
-    font-weight: 900;
-}
