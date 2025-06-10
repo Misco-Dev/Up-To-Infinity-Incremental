@@ -141,9 +141,9 @@ import SpeedInsights  from "@vercel/speed-insights/astro"
             document.addEventListener("visibilitychange", () => {
                 const favicon = document.querySelector("link[rel~='icon']");
                 if (favicon instanceof HTMLLinkElement) {
-                favicon.href = document.hidden
-                    ? "/image/inactive-icon.ico"
-                    : "/image/icon.ico";
+                    favicon.href = document.hidden
+                        ? "/image/inactive-icon.ico"
+                        : "/image/icon.ico";
                 }
             });
         </script>
