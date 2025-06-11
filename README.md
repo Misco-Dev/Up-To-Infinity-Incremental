@@ -1,6 +1,6 @@
 # UP TO INFINITY INCREMENTAL
 
-![Up To Infinity Incremental](https://uptoinfinityincremental.work.gd/image/background.webp)
+![Up To Infinity Incremental](https://qronexstudios.com/image/background.webp)
 
 ---
 
@@ -50,5 +50,5 @@ This project is licensed under the Apache License 2.0- see the [LICENSE](LICENSE
 - [Discord Server](https://discord.gg/RnQP9BQjge)
 - [Twitter](https://x.com/QronexStudio)
 
-![Logo](https://uptoinfinityincremental.work.gd/image/icon.png)
+![Logo](https://qronexstudios.com/image/icon.png)
 
