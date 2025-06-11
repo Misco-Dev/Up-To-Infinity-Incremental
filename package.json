@@ -16,12 +16,12 @@
     "@fontsource-variable/fredoka": "^5.2.8",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
-    "astro": "^5.9.0",
     "sharp": "^0.34.2"
   },
   "packageManager": "pnpm@8.15.4",
   "devDependencies": {
     "@eslint/js": "^9.28.0",
+    "astro": "^5.9.0",
     "astro-eslint-parser": "^1.2.2",
     "eslint": "^9.28.0",
     "eslint-config-prettier": "^10.1.5",
