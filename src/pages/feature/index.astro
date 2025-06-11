@@ -11,7 +11,7 @@ const features: Feature[] = [
 	{
 		title: "Infinite Progression",
 		description: "Unlock endless possibilities with our unique infinity system",
-		icon: "♾️",
+		icon: "∞",
 	},
 	{
 		title: "Strategic Upgrades",
@@ -43,7 +43,7 @@ const features: Feature[] = [
                 {features.map((feature, index) => (
                     <article class="feature-card" style={`animation-delay: ${0.5 + index * 0.2}s;`}>
                         <div class="feature-icon" aria-hidden="true">{feature.icon}</div>
-                        <h3 role="heading" aria-level="3">{feature.title}</h3>
+                        <h2 role="heading" aria-level="3">{feature.title}</h2>
                         <p>{feature.description}</p>
                     </article>
                 ))}
