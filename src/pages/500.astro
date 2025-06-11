@@ -1,0 +1,99 @@
+---
+import Layout from "@/layouts/Layout.astro"
+---
+<Layout title="Up To Infinity Incremental | 500">
+    <main role="main" class="error-container">
+        <h1 class="title-500" role="heading" aria-level="1">500</h1>
+        <p class="incorrect-route" role="alert">Sorry come back another time.</p>
+        <a class="go-back" href="/" role="button" aria-label="Volver a la página de inicio">Back to Home</a>
+    </main>
+
+    <style>
+        :root {
+            --color-primary: #8a5be2;
+            --color-secondary: #ff69b4;
+            --color-text-light: #fff;
+            --color-text-medium: #eee;
+            --color-text-dark: #ddd;
+            --color-bg-transparent-light: #ffffff0d;
+            --color-bg-transparent-medium: #ffffff1a; 
+            --color-shadow-light: #0000004d;
+            --color-shadow-medium: #00000066;
+        }
+
+        .error-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2rem;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        .title-500 {
+            font-size: clamp(8rem, 20vw, 15rem); 
+            margin: 0;
+            font-weight: 900;
+            background: linear-gradient(45deg, var(--color-text-light), var(--color-text-medium));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            animation: glow 3s ease-in-out infinite;
+            width: 100%;
+            user-select: none;
+        }
+        .incorrect-route {
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            margin: 1.5rem 0 3rem;
+            color: var(--color-text-medium);
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 0.8s ease forwards 0.5s;
+            opacity: 0;
+        }
+        .go-back {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            font-weight: bold;
+            color: var(--color-text-light);
+            background: var(--color-bg-transparent-medium);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: fadeInUp 0.8s ease forwards 0.8s;
+            opacity: 0;
+        }
+        .go-back:hover {
+            background: rgba(255, 255, 255, 0.3);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+        }
+        @keyframes glow {
+            0%, 100% {
+                text-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 50px rgba(255, 255, 255, 0.3);
+            }
+            50% {
+                text-shadow: 0 0 60px rgba(255, 255, 255, 0.9), 0 0 90px rgba(255, 255, 255, 0.6);
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        body:hover {
+            cursor: default;
+        }
+    </style>
+</Layout>
