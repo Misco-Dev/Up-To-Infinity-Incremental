@@ -1,13 +1,11 @@
 @media screen and (max-width: 768px) {
     body {
-        width: 10vw;;
+        width: 10vw;
     }
-    
 }
 
 @media screen and (max-width: 480px) {
     body {
         width: 100vw;
     }
-    
 }
