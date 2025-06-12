@@ -1,17 +1,12 @@
 {
-  "extends": "./node_modules/astro/tsconfigs/strict.json",
-  "include": [
-    ".astro/types.d.ts",
-    "src/**/*.ts",
-    "src/**/*.tsx",
-    "src/**/*.astro"
-  ],
-  "exclude": ["dist"],
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    },
-    "types": ["astro/client"],
-  }
+    "extends": "./node_modules/astro/tsconfigs/strict.json",
+    "include": [".astro/types.d.ts", "src/**/*.ts", "src/**/*.tsx", "src/**/*.astro"],
+    "exclude": ["dist"],
+    "compilerOptions": {
+        "baseUrl": ".",
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "types": ["astro/client"]
+    }
 }
