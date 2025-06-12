@@ -12,11 +12,11 @@
 
 ## ✨ Features
 
-* **Infinite Progression System:** Experience limitless growth and new challenges.
-* **Dynamic Upgrades & Achievements:** Constantly evolve your gameplay with new unlocks.
-* **Modern & Responsive UI:** Enjoy a sleek, intuitive, and adaptive user interface across all devices.
-* **Cross-Platform Compatibility:** Play seamlessly on various platforms.
-* **Real-time Saving System:** Your progress is always safe and automatically saved.
+- **Infinite Progression System:** Experience limitless growth and new challenges.
+- **Dynamic Upgrades & Achievements:** Constantly evolve your gameplay with new unlocks.
+- **Modern & Responsive UI:** Enjoy a sleek, intuitive, and adaptive user interface across all devices.
+- **Cross-Platform Compatibility:** Play seamlessly on various platforms.
+- **Real-time Saving System:** Your progress is always safe and automatically saved.
 
 ---
 
@@ -41,14 +41,16 @@ pnpm run dev
 ```
 
 ## 🤝 Contributing
+
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
+
 This project is licensed under the Apache License 2.0- see the [LICENSE](LICENSE) file for details.
 
 ## 🔗 Links
+
 - [Discord Server](https://discord.gg/RnQP9BQjge)
 - [Twitter](https://x.com/QronexStudio)
 
 ![Logo](https://qronexstudios.com/image/icon.png)
-
