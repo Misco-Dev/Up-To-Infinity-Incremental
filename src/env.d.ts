@@ -1,1 +1,1 @@
-declare module 'astro:transitions';
+declare module 'astro:transitions'
