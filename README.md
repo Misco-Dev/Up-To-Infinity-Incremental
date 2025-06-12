@@ -28,7 +28,7 @@ Follow these simple steps to get a copy of the project up and running on your lo
 
 ```bash
 # 1. Clone the repository
-git clone [https://github.com/misco-j/Up-To-Infinity-Incremental.git](https://github.com/misco-j/Up-To-Infinity-Incremental.git)
+git clone https://github.com/misco-j/Up-To-Infinity-Incremental.git
 
 # 2. Navigate to the project directory
 cd Up-To-Infinity-Incremental
