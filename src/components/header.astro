@@ -1,20 +1,20 @@
 <header role="banner">
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
     <nav class="navbar" role="navigation">
         <div class="nav-container">
-        <a href="/" class="logo" aria-label="Home">UP2♾️Incremental</a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <ul class="nav-links" role="list">
-            <li><a href="/" class="nav-link" role="link">Home</a></li>
-            <li><a href="/feature/" class="nav-link" role="link">Features</a></li>
-            <li><a href="/about/" class="nav-link" role="link">About</a></li>
-            <li><a href="/contact/" class="nav-link" role="link">Contact</a></li>
-            <li><a href="/shop/" class="nav-link" role="link">Shop</a></li>
-        </ul>
+            <a href="/" class="logo" aria-label="Home">UP2♾️Incremental</a>
+            <label for="menu-toggle" class="menu-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <ul class="nav-links" role="list">
+                <li><a href="/" class="nav-link" role="link">Home</a></li>
+                <li><a href="/feature/" class="nav-link" role="link">Features</a></li>
+                <li><a href="/about/" class="nav-link" role="link">About</a></li>
+                <li><a href="/contact/" class="nav-link" role="link">Contact</a></li>
+                <li><a href="/shop/" class="nav-link" role="link">Shop</a></li>
+            </ul>
         </div>
     </nav>
 </header>
@@ -33,15 +33,20 @@
     }
 
     .navbar {
-        background-color: #000b;
+        border: 1px solid #000;
+        background-color: #0000004d;
+        backdrop-filter: blur(10px);
         padding: 15px 20px;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
+        position: relative;
+        top: -50px;
+        width: 62.5vw;
         z-index: 1000;
         box-shadow: 0 2px 8px #0008;
         font-size: 24px;
+        margin: auto;
+        border-radius: 50px;
+        min-width: 1200px;
+        transition: border-radius 0.3s ease-in-out;
     }
 
     .nav-container {
@@ -56,8 +61,12 @@
     .logo {
         font-size: 24px;
         font-weight: bold;
-        color: white;
+        color: #fff;
         text-decoration: none;
+    }
+
+    .logo::selection{
+        background-color: transparent;
     }
 
     .nav-links {
@@ -86,6 +95,10 @@
         background-position: 100%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+
+    .nav-link::selection{
+        background-color: transparent;
     }
 
     .nav-link::after {
@@ -119,58 +132,102 @@
         flex-direction: column;
         justify-content: center;
         cursor: pointer;
-        gap: 6px;
-        width: 30px;
-        height: 25px;
+        width: 24px;
+        height: 20px;
         z-index: 1100;
+        position: relative;
     }
 
     .menu-icon span {
-        height: 3px;
+        height: 2px;
         width: 100%;
-        background-color: white;
-        border-radius: 3px;
-        transition: all 0.4s ease;
-        transform-origin: center;
+        background-color: #fff;
+        border-radius: 2px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: left center;
+        position: absolute;
     }
 
-    .menu-toggle:checked ~ .menu-icon span:nth-child(1) {
-        transform: rotate(45deg) translateY(12.5px);
+    .menu-icon span:nth-child(1) {
+        top: 2px;
     }
 
-    .menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    .menu-icon span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-icon span:nth-child(3) {
+        bottom: 2px;
+    }
+
+    .menu-toggle:checked ~ .navbar .menu-icon span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 0.75px;
+        left: 2px;
+    }
+
+    .menu-toggle:checked ~ .navbar .menu-icon span:nth-child(2) {
         opacity: 0;
-        transform: scaleX(0);
     }
 
-    .menu-toggle:checked ~ .menu-icon span:nth-child(3) {
-        transform: rotate(-45deg) translateY(-12.5px);
+    .menu-toggle:checked ~ .navbar .menu-icon span:nth-child(3) {
+        transform: rotate(-45deg);
+        bottom: 0.75px;
+        left: 2px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 1250px) {
+        .navbar {
+            max-width: 1200px;
+            min-width: 350px;
+            width: 95vw;
+            border-radius: 50px;
+        }
+
         .menu-icon {
-        display: flex;
+            display: flex;
+            margin-left: auto;
+        }
+
+        .logo {
+            margin-right: auto;
+            margin-left: 0;
         }
 
         .nav-links {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #000c;
-        flex-direction: column;
-        align-items: center;
-        height: 0;
-        overflow: hidden;
-        transition: height 0.3s ease-in-out;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #000c;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 0 0 25px 25px;
+            padding: 0;
         }
 
-        .nav-links li {
-        margin: 10px 0;
+        .menu-toggle:checked ~ .navbar {
+            border-radius: 50px 50px 0 0 !important;
         }
 
-        .menu-toggle:checked ~ .nav-links {
-        height: 250px;
+        .menu-toggle:checked ~ .navbar .nav-links {
+            height: 250px;
+            padding: 1rem 0;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .navbar {
+            width: 85vw;
+        }
+
+        .logo{
+            font-size: 20px;
         }
     }
 </style>

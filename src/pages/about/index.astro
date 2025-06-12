@@ -173,16 +173,18 @@ import Layout from "@/layouts/Layout.astro";
     }
 
     .company-link {
-        color: var(--color-secondary);
+        color: #ff69b466;
         text-decoration: none;
-        border-bottom: 2px solid transparent;
-        transition: border-color 0.3s ease, color 0.3s ease;
+        transition: color 0.3s ease, background-color 0.4s ease, border-radius 0.3s ease;
         font-weight: bold;
+        padding: 5px;
     }
 
     .company-link:hover {
-        border-color: var(--color-secondary);
-        color: #ff8cc0;
+        color: var(--color-secondary);
+        background-color: #00000080;
+        border-radius: 10px;
+        text-shadow: 1px 1px 40px var(--color-secondary) ;
     }
 
     .features-grid {
@@ -205,6 +207,10 @@ import Layout from "@/layouts/Layout.astro";
         animation: fadeInUp 0.8s ease forwards;
         border: 1px solid #ffffff1a;
         box-shadow: 0 4px 15px #00000033;
+    }
+
+    .feature-card::selection{
+        background-color: transparent;
     }
 
     .feature-card-1 {

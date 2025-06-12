@@ -260,6 +260,10 @@ import Robux from "@/assets/images/robux.webp";
         cursor: pointer;
     }
 
+    .shop-items::selection{
+        background-color: transparent;
+    }
+
     .shop-item:nth-child(1) { animation-delay: 0.5s; }
     .shop-item:nth-child(2) { animation-delay: 0.6s; }
     .shop-item:nth-child(3) { animation-delay: 0.7s; }
@@ -397,7 +401,7 @@ import Robux from "@/assets/images/robux.webp";
 
         .shop-item:hover {
             transform: none;
-            background: rgba(255, 255, 255, 0.08);
+            background: #ffffff14;
             box-shadow: 0 6px 20px var(--color-shadow-light);
             backdrop-filter: blur(8px);
         }

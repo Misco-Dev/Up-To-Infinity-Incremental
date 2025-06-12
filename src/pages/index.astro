@@ -153,6 +153,10 @@ import Countdown from "@/components/countdown.astro"
         opacity: 0;
     }
 
+    .features::selection{
+        background-color: transparent;
+    }
+
     .feature-item {
         padding: 2rem;
         background: var(--color-primary-transparent);
@@ -190,11 +194,8 @@ import Countdown from "@/components/countdown.astro"
     .countdown-section {
         text-align: center;
         padding: 4rem 1rem;
-        background: #00000020;
         margin-top: 4rem;
         border-radius: 12px;
-        backdrop-filter: blur(5px);
-        border: 1px solid #ffffff0d;
     }
 
     .countdown-text {
