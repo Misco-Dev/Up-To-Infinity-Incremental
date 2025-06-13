@@ -52,6 +52,7 @@ import Countdown from "@/components/countdown.astro"
         --color-bg-transparent-medium: #ffffff1a;
         --color-shadow-light: #0000004d;
         --color-shadow-medium: #00000066;
+        --color-primary-transparent: #8a5be21a;
     }
 
     @keyframes fadeInUp {
@@ -67,14 +68,19 @@ import Countdown from "@/components/countdown.astro"
 
     .main-content {
         overflow-x: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+        position: relative;
     }
 
     .hero-section {
-        min-height: 80vh;
+        flex: 1;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem;
+        padding: 4rem 2rem;
         animation: fadeInUp 1s ease forwards;
         animation-delay: 0.2s;
         opacity: 0;
@@ -95,6 +101,7 @@ import Countdown from "@/components/countdown.astro"
         animation: fadeInUp 1s ease forwards;
         animation-delay: 0.4s;
         opacity: 0;
+        will-change: transform;
     }
 
     .container:hover {
@@ -164,6 +171,7 @@ import Countdown from "@/components/countdown.astro"
         border-radius: 18px; 
         transition: transform 0.3s ease, box-shadow 0.3s ease;
         border: 1px solid #ffffff14;
+        will-change: transform;
     }
 
     .feature-item:hover {
@@ -179,7 +187,7 @@ import Countdown from "@/components/countdown.astro"
         text-shadow: 0 0 10px #ff69b499;
     }
 
-    .feature-item h4 {
+    .feature-item h2 {
         font-size: 1.35rem;
         color: var(--color-text-light);
         margin: 0.6rem 0;
@@ -193,8 +201,8 @@ import Countdown from "@/components/countdown.astro"
 
     .countdown-section {
         text-align: center;
-        padding: 4rem 1rem;
-        margin-top: 4rem;
+        padding: 2rem 1rem;
+        margin-top: 2rem;
         border-radius: 12px;
     }
 
@@ -266,7 +274,7 @@ import Countdown from "@/components/countdown.astro"
             margin-bottom: 1rem;
         }
 
-        .feature-item h4 {
+        .feature-item h2 {
             font-size: 1.3rem;
         }
 
@@ -332,7 +340,7 @@ import Countdown from "@/components/countdown.astro"
             margin-bottom: 0.8rem;
         }
 
-        .feature-item h4 {
+        .feature-item h2 {
             font-size: 1.15rem;
         }
 
