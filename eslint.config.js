@@ -16,7 +16,7 @@ export default [
     // TypeScript and JavaScript files
     ...tseslint.configs.recommended,
     {
-        files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
+        files: ['src/**/*.{js,mjs,cjs,ts,mts,cts,tsx}'], // Modified this line
         languageOptions: {
             globals: {
                 ...globals.browser,
@@ -24,6 +24,7 @@ export default [
             },
             parser: tseslint.parser,
             parserOptions: {
+                project: './tsconfig.json',
                 sourceType: 'module',
                 ecmaVersion: 'latest',
                 ecmaFeatures: {
@@ -33,11 +34,17 @@ export default [
         },
         rules: {
             'no-console': ['warn', { allow: ['warn', 'error'] }],
-            'no-unused-vars': 'warn'
+            'no-unused-vars': 'off', // Using TypeScript's checker instead
+            '@typescript-eslint/no-unused-vars': ['warn'],
+            '@typescript-eslint/explicit-function-return-type': ['warn'],
+            '@typescript-eslint/no-explicit-any': ['error'],
+            '@typescript-eslint/strict-boolean-expressions': ['warn'],
+            'prefer-const': 'warn',
+            'eqeqeq': ['error', 'always']
         }
     },
     {
-        files: ['**/*.astro'],
+        files: ['src/**/*.astro'], // Modified this line
         plugins: { astro },
         languageOptions: {
             parser: astroParser,
@@ -45,7 +52,8 @@ export default [
                 parser: tseslint.parser,
                 extraFileExtensions: ['.astro'],
                 sourceType: 'module',
-                ecmaVersion: 'latest'
+                ecmaVersion: 'latest',
+                project: './tsconfig.json'
             },
             globals: {
                 ...globals.browser,
@@ -57,7 +65,9 @@ export default [
             'no-undef': 'off',
             'no-unused-vars': 'warn',
             'astro/no-conflict-set-directives': 'error',
-            'astro/no-unused-define-vars-in-style': 'error'
+            'astro/no-unused-define-vars-in-style': 'error',
+            'astro/valid-compile': 'error',
+            'astro/no-set-text-directive': 'error'
         }
     }
 ]
