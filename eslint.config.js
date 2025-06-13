@@ -13,10 +13,9 @@ export default [
             'node_modules/**/*'
         ]
     },
-    // TypeScript and JavaScript files
     ...tseslint.configs.recommended,
     {
-        files: ['src/**/*.{js,mjs,cjs,ts,mts,cts,tsx}'], // Modified this line
+        files: ['src/**/*.{js,mjs,cjs,ts,mts,cts,tsx}'],
         languageOptions: {
             globals: {
                 ...globals.browser,
@@ -44,7 +43,7 @@ export default [
         }
     },
     {
-        files: ['src/**/*.astro'], // Modified this line
+        files: ['src/**/*.astro'],
         plugins: { astro },
         languageOptions: {
             parser: astroParser,
