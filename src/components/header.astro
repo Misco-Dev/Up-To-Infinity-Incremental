@@ -1,3 +1,13 @@
+---
+const NAV = [
+    {text: "Home", url: "/"},
+    {text: "Features", url: "/feature/"},
+    {text: "About", url: "/about/"},
+    {text: "Contact", url: "/contact/"},
+    {text: "Shop", url: "/shop/"}
+];
+---
+
 <header role="banner">
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
     <nav class="navbar" role="navigation">
@@ -9,11 +19,7 @@
                 <span></span>
             </label>
             <ul class="nav-links" role="list">
-                <li><a href="/" class="nav-link" role="link">Home</a></li>
-                <li><a href="/feature/" class="nav-link" role="link">Features</a></li>
-                <li><a href="/about/" class="nav-link" role="link">About</a></li>
-                <li><a href="/contact/" class="nav-link" role="link">Contact</a></li>
-                <li><a href="/shop/" class="nav-link" role="link">Shop</a></li>
+                {NAV.map(nav => <li><a href={nav.url} class="nav-link" role="link">{nav.text}</a></li>)}
             </ul>
         </div>
     </nav>

@@ -30,6 +30,34 @@ import Robux from "@/assets/images/robux.webp";
 
 const title = "Up To Infinity Incremental | Shop"
 const description = "Browse exclusive boosts and upgrades for Up To Infinity Incremental. Support the game's development and power up your progress with Robux."
+
+const ITEM = [
+    {title: "Elite", url: Elite, price: "1199"},
+    {title: "Vip", url: Vip, price: "499"},
+    {title: "x2 Runes Bulk", url: x2RunesBulk, price: "299"},
+    {title: "x2 Runes Clone", url: x2RunesClone, price: "299"},
+    {title: "x2 Income Tick Speed", url: x2IncomeTickSpeed, price: "199"},
+    {title: "x2 Bones", url: x2Bones, price: "49"},
+    {title: "x2 Cash", url: x2Cash, price: "49"},
+    {title: "x2 Clicks", url: x2Clicks, price: "49"},
+    {title: "x2 Damage", url: x2Damage, price: "49"},
+    {title: "x2 Health", url: x2Health, price: "49"},
+    {title: "x2 Horns", url: x2Horns, price: "49"},
+    {title: "x2 Infinities", url: x2Infinities, price: "49"},
+    {title: "x2 Level", url: x2Level, price: "49"},
+    {title: "x2 Multiplier", url: x2Multiplier, price: "49"},
+    {title: "x2 Pixels", url: x2Pixels, price: "49"},
+    {title: "x2 Rebirths", url: x2Rebirths, price: "49"},
+    {title: "x2 Research Speed", url: x2ResearchSpeed, price: "49"},
+    {title: "x2 Slimes", url: x2Slimes, price: "49"},
+    {title: "x2 Tokens", url: x2Tokens, price: "49"},
+    {title: "x2 Xp", url: x2Xp, price: "49"},
+    {title: "x2 Mining Damage", url: x2MiningDamage, price: "49"},
+    {title: "x2 Mining Speed", url: x2MiningSpeed, price: "49"},
+    {title: "x2 Ores", url: x2Ores, price: "49"},
+    {title: "x2 Attack Speed", url: X2AttackSpeed, price: "49"},
+    {title: "x2 Walk Speed", url: x2WalkSpeed, price: "19"},
+]
 ---
 
 <Layout title={ title } description={ description }>
@@ -41,131 +69,13 @@ const description = "Browse exclusive boosts and upgrades for Up To Infinity Inc
             </p>
         </section>
         <section class="shop-items" aria-label="Shop Items">
-            <div class="shop-item" >
-                <Image src={Elite} alt="Elite" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">Elite</h2>
-                <p class="item-price"><span>1199</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={Vip} alt="VIP" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">VIP</h2>
-                <p class="item-price"><span>499</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2RunesBulk} alt="x2 Runes Bulk" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Runes Bulk</h2>
-                <p class="item-price"><span>299</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2RunesClone} alt="x2 Runes Clone" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Runes Clone</h2>
-                <p class="item-price"><span>299</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2IncomeTickSpeed} alt="x2 Income Tick Speed" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Income Tick Speed</h2>
-                <p class="item-price"><span>199</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Bones} alt="x2 Bones" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Bones</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Cash} alt="x2 Cash" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Cash</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Clicks} alt="x2 Clicks" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Clicks</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Damage} alt="x2 Damage" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Damage</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Health} alt="x2 Health" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Health</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Horns} alt="x2 Horns" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Horns</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Infinities} alt="x2 Infinities" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Infinities</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Level} alt="x2 Level" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Level</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Multiplier} alt="x2 Multiplier" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Multiplier</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Pixels} alt="x 2Pixels" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x 2Pixels</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Rebirths} alt="x2 Rebirths" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Rebirths</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2ResearchSpeed} alt="x2 Research Speed" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Research Speed</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Slimes} alt="x2 Slimes" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Slimes</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Tokens} alt="x2 Tokens" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Tokens</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Xp} alt="x2 Xp" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Xp</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2MiningDamage} alt="x2 Mining Damage" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Mining Damage</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2MiningSpeed} alt="x2 Mining Speed" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Mining Speed</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2Ores} alt="x2 Ores" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Ores</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={X2AttackSpeed} alt="x2 Attack Speed" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Attack Speed</h2>
-                <p class="item-price"><span>49</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
-            <div class="shop-item" >
-                <Image src={x2WalkSpeed} alt="x2 Walk Speed" width={120} height={120} loading="lazy" decoding="async" />
-                <h2 class="item-title">x2 Walk Speed</h2>
-                <p class="item-price"><span>19</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
-            </div>
+            {ITEM.map(item => 
+                <div class="shop-item" >
+                    <Image src={item.url} alt={item.title} width={120} height={120} loading="lazy" decoding="async" />
+                    <h2 class="item-title">{item.title}</h2>
+                    <p class="item-price"><span>{item.price}</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
+                </div>
+            )}
         </section>
     </main>
 </Layout>
