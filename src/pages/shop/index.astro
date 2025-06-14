@@ -27,9 +27,12 @@ import x2MiningSpeed from "@/assets/images/x2MiningSpeed.webp";
 import x2Ores from "@/assets/images/x2Ores.webp";
 import X2AttackSpeed from "@/assets/images/x2AttackSpeed.webp";
 import Robux from "@/assets/images/robux.webp";
+
+const title = "Up To Infinity Incremental | Shop"
+const description = "Browse exclusive boosts and upgrades for Up To Infinity Incremental. Support the game's development and power up your progress with Robux."
 ---
 
-<Layout title=" Up To Infinity Incremental | Shop">
+<Layout title={ title } description={ description }>
     <main class="shop-page-main" role="main">
         <section class="hero-section" aria-labelledby="shop-title">
             <h1 id="shop-title" class="hero-title title" role="heading" aria-level="1">Shop</h1>
@@ -37,14 +40,14 @@ import Robux from "@/assets/images/robux.webp";
                 Explore our collection of unique items and support the development of the game.
             </p>
         </section>
-        <section class="shop-items" aria-label="Artículos de la tienda">
+        <section class="shop-items" aria-label="Shop Items">
             <div class="shop-item" >
-                <Image src={Elite} alt="Paquete Elite" width={120} height={120} loading="lazy" decoding="async" />
+                <Image src={Elite} alt="Elite" width={120} height={120} loading="lazy" decoding="async" />
                 <h2 class="item-title">Elite</h2>
                 <p class="item-price"><span>1199</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
             </div>
             <div class="shop-item" >
-                <Image src={Vip} alt="Paquete VIP" width={120} height={120} loading="lazy" decoding="async" />
+                <Image src={Vip} alt="VIP" width={120} height={120} loading="lazy" decoding="async" />
                 <h2 class="item-title">VIP</h2>
                 <p class="item-price"><span>499</span><Image src={Robux} alt="Icono de Robux" class="item-icon" width={24} height={24} loading="lazy" decoding="async" /></p>
             </div>
