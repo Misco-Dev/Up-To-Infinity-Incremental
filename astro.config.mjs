@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel'
-import { pwa } from '@vite-pwa/astro';
+import pwa from '@vite-pwa/astro';
 
 export default defineConfig({
     site: 'https://qronexstudios.com/',
