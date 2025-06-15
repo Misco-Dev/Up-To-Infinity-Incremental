@@ -149,12 +149,6 @@ import SpeedInsights  from "@vercel/speed-insights/astro"
                         : "/image/icon.ico";
                 }
             });
-
-            if ('serviceWorker' in navigator) {
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/sw.js');
-                });
-            }
         </script>
     </body>
 </html>
