@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel'
-import { VitePWA } from '@vite-pwa/astro';
+import { pwa } from '@vite-pwa/astro';
 
 export default defineConfig({
     site: 'https://qronexstudios.com/',
@@ -11,7 +11,7 @@ export default defineConfig({
     }),
     defaultLocale: 'en',
     integrations: [
-        VitePWA({
+        pwa({
             registerType: 'autoUpdate',
             includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
             manifest: {
