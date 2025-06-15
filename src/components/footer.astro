@@ -2,6 +2,7 @@
 import DiscordIcon from '@/assets/svg/discord.svg';
 import TwitterIcon from '@/assets/svg/twitter.svg';
 import GithubIcon from '@/assets/svg/github.svg';
+import Download from '@/assets/svg/download.svg';
 ---
 
 <footer class="footer-container" role="contentinfo">
@@ -27,6 +28,9 @@ import GithubIcon from '@/assets/svg/github.svg';
             <a href="https://github.com/Misco-Dev/Up-To-Infinity-Incremental" target="_blank" rel="noopener noreferrer" class="social-link github" aria-label="Visita nuestro repositorio en GitHub">
                 <GithubIcon class="icon" />
             </a>
+            <a id="thebutton" href="/op.txt" download target="_blank" rel="noopener noreferrer" class="social-link download" aria-label="Visita nuestro repositorio en GitHub">
+                <Download class="icon" />
+            </a>
         </div>
     </div>
 </footer>
@@ -46,6 +50,7 @@ import GithubIcon from '@/assets/svg/github.svg';
         --color-discord: #5865f2;
         --color-twitter: #1DA1F2;
         --color-github: #333;
+        --color-download: #8a5be2;
     }
 
     .footer-container {
@@ -173,7 +178,6 @@ import GithubIcon from '@/assets/svg/github.svg';
     .social-link .icon {
         width: 22px;
         height: 22px;
-        fill: currentColor;
         transition: all 0.3s ease;
         position: relative;
         z-index: 2;
@@ -211,6 +215,17 @@ import GithubIcon from '@/assets/svg/github.svg';
         background: var(--color-github);
         border-color: var(--color-github);
         box-shadow: 0 6px 15px #33333399;
+        color: var(--color-text-light);
+    }
+
+    #thebutton {
+        display: none;
+    }
+
+    .download:hover {
+        background: var(--color-download);
+        border-color: var(--color-download);
+        box-shadow: 0 6px 15px #6d298599;
         color: var(--color-text-light);
     }
 
@@ -278,3 +293,36 @@ import GithubIcon from '@/assets/svg/github.svg';
         }
     }
 </style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const SecretButton = document.getElementById('thebutton');
+    if (!SecretButton) {
+        return;
+    }
+
+    const SecretKey = 'qronexstudios';
+    let EntryUser = '';
+
+    window.addEventListener('keydown', (evento: KeyboardEvent) => {
+        const teclaPresionada = evento.key.toLowerCase();
+
+        if (/^[a-z]$/.test(teclaPresionada)) {
+            EntryUser += teclaPresionada;
+
+            if (EntryUser.length > SecretKey.length) {
+                EntryUser = EntryUser.slice(-SecretKey.length);
+            }
+
+            if (EntryUser === SecretKey) {
+                revelarBoton(SecretButton);
+            }
+        }
+    });
+
+    function revelarBoton(boton: HTMLElement) {
+        boton.style.display = 'flex';
+        console.log('[qronexstudios] 🔓 ¡Correct sequence! Button revealed!');
+    }
+});
+</script>
